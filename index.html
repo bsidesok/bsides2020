@@ -70,7 +70,85 @@
   <section id="intro">
     <div class="intro-container wow fadeIn" id="registration">
       <img src="img/logo.png" alt="BSidesOK 12" style="max-height:45%;">
-      <h1 class="mb-4 pb-0">The Annual<br><span>BSidesOK</span> Conference</h1>
+      <!-- <h1 class="mb-4 pb-0">The Annual<br><span>BSidesOK</span> Conference</h1> -->
+
+
+
+      <div class="centered"><div class="neon" style="font-family: arial, sans">BSidesOK 2020</div></div>
+
+<svg >
+<defs>
+  
+   <filter id="stroke">
+     <feMorphology operator="dilate" radius="1" 
+in="SourceGraphic" result="outside" />
+     <feMorphology operator="dilate" radius="2" 
+in="outside" result="thickened" />
+     <feComposite operator="out" in2="SourceGraphic" in="thickened" result="stroke"/>
+     
+  </filter>
+  
+  <filter id="inner-glow" >
+    <feFlood flood-color="#e10b8d"/>
+    <feComposite in2="SourceAlpha" operator="out"/>
+    <feGaussianBlur stdDeviation="0.5" result="blur"/>
+    <feComposite operator="atop" in2="SourceGraphic"/>
+    
+</filter>
+  
+  <filter id="outer-glow" >
+    <!-- Thicken out the original shape -->
+    <feMorphology operator="dilate" radius="2" in="SourceAlpha" result="thicken" />
+
+    <!-- Use a gaussian blur to create the soft blurriness of the glow -->
+    <feGaussianBlur in="thicken" stdDeviation="5" result="blurred" />
+
+    <!-- Change the colour -->
+    <feFlood  flood-color="#db0273" result="glowColor" />
+
+    <!-- Color in the glows -->
+    <feComposite in="glowColor" in2="blurred" operator="in" result="softGlow_colored" />
+
+    <!--  Layer the effects together -->
+    <feMerge>
+      <feMergeNode in="softGlow_colored"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+
+  </filter>
+  
+  <filter id="outer-glow1" >
+    <!-- Thicken out the original shape -->
+    <feMorphology operator="dilate" radius="20" in="SourceAlpha" result="thicken" />
+
+    <!-- Use a gaussian blur to create the soft blurriness of the glow -->
+    <feGaussianBlur in="thicken" stdDeviation="25" result="blurred" />
+
+    <!-- Change the colour -->
+    <feFlood  flood-color="#530139" result="glowColor" />
+
+    <!-- Color in the glows -->
+    <feComposite in="glowColor" in2="blurred" operator="in" result="softGlow_colored" />
+
+    <!--  Layer the effects together -->
+    <feMerge>
+      <feMergeNode in="softGlow_colored"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+
+  </filter>
+  </defs>
+  
+  
+</svg>
+
+
+
+
+
+
+
+
       <p class="mb-4 pb-0"><span>Conference</span> April 10th, 2020 - Glenpool Conference Center</p>
       <!-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
         data-autoplay="true"></a> -->
@@ -97,7 +175,7 @@
           </div>
           <div class="col-lg-3">
             <h3>When</h3>
-            <p>Wednesday<br>April 10th, 2020</p>
+            <p>April<br>April 10th, 2020</p>
           </div>
         </div>
       </div>
@@ -107,8 +185,51 @@
       Schedule Section
     ============================-->
     <section id="schedule" class="section-with-bg">
-      <div class="container wow fadeInUp">
+      <!-- <div class="container wow fadeInUp"> -->
+        <div class="wow fadeInUp">
         <div class="section-header">
+
+
+          <div class="screen">
+
+            <script type="text/javascript">
+              
+              window.addEventListener("DOMContentLoaded", () => {
+    
+    const screenText = document.querySelectorAll("p"),
+          delay = [100, 2200, 3200, 4200, 5700, 7200];
+
+    screenText.forEach((text, i) => setTimeout(() => text.classList.add("show"), delay[2]));
+    
+});
+
+            </script>
+
+            <p>greetings professor falken</p>
+
+            <p>hello</p>
+
+            <div>
+
+                <p>A strange game.</p>
+
+                <p>The only winning move is</p>
+
+                <p>not to play.</p>
+
+            </div>
+
+            <p>How about a nice game of chess?</p>
+
+        </div>
+
+
+
+
+
+
+
+          <br>
           <h2>Call for Papers</h2>
           <p>Would you like to present a talk to Oklahoma's premier security conference?</p>
           <a href="https://www.papercall.io/bsidesok2020-cfp" class="button">Call for Papers</a>
@@ -122,6 +243,101 @@
 
         </div>
 
+
+    </section>
+
+
+
+
+
+
+    <!--==========================
+      Speakers Section
+    ============================-->
+    <section id="speakers" class="wow fadeInUp">
+      <div class="container">
+        <div class="section-header">
+          <h2>Event Trainers</h2>
+          <p>Here are some of our trainers</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="img/sweaney.png" width="400px" alt="Speaker 1" class="img-fluid">
+              <div class="details">
+                <!-- <h3><a href="speaker-details.html">Nathan Sweaney</a></h3> -->
+                <h3>Nathan Sweaney</h3>
+                <p>Network Penetration Testing</p>
+                <div class="social">
+                  <a href=""><i class="fa fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="img/wall.jpg" alt="Speaker 2" class="img-fluid">
+              <div class="details">
+                <h3>Kristopher Wall</h3>
+
+                <p>Web App Pentesting</p>
+                <div class="social">
+                  <a href=""><i class="fa fa-twitter"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="img/moss.jpg" alt="Speaker 3" class="img-fluid">
+              <div class="details">
+                <h3><a href="speaker-details.html">Aaron Moss</a></h3>
+                <p>Exploit Development</p>
+                <div class="social">
+                  <a href=""><i class="fa fa-twitter"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="img/wilson.jpg" alt="Speaker 4" class="img-fluid">
+              <div class="details">
+                <h3><a href="speaker-details.html">Geoff Wilson</a></h3>
+                <p>Risk Assessment</p>
+                <div class="social">
+                  <a href=""><i class="fa fa-twitter"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="img/gough.png" width="400px" alt="Speaker 5" class="img-fluid">
+              <div class="details">
+                <h3><a href="speaker-details.html">Michael Gough</a></h3>
+                <p>Malware Analysis</p>
+                <div class="social">
+                  <a href=""><i class="fa fa-twitter"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="img/kimmitt.jpg" alt="Speaker 6" class="img-fluid">
+              <div class="details">
+                <h3><a href="speaker-details.html">Jonathan Kimmitt</a></h3>
+                <p>Incident Response</p>
+                <div class="social">
+                  <a href=""><i class="fa fa-twitter"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </section>
 
