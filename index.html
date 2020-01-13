@@ -1,686 +1,704 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <title>BSidesOK</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
-
-  <!-- Favicons -->
-  <link href="http://iwsokc.org/img/favicon.png" rel="icon">
-  <link href="http://iwsokc.org/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
-
-  <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Libraries CSS Files -->
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
-  <link href="lib/venobox/venobox.css" rel="stylesheet">
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-  <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-    Theme Name: TheEvent
-    Theme URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
-</head>
-
-<body>
-
-  <!--==========================
-    Header
-  ============================-->
-  <header id="header">
-    <div class="container">
-
-      <div id="logo" class="pull-left">
-        <!-- Uncomment below if you prefer to use a text logo -->
-         <h1><a href="index.html#main">BSidesOK</a></h1>
-        <!-- <a href="#intro" class="scrollto"><img src="img/logo.png" alt="" title=""></a> -->
-      </div>
-
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          <li class="menu-active"><a href="index.html#intro">Home</a></li>
-          <li><a href="https://www.papercall.io/bsidesok2020-cfp">CFP</a></li>
-          <!-- <li><a href="index.html#registration">Registration</a></li> -->
-          <li><a href="index.html#about">Conference</a></li>
-          <!-- <li><a href="index.html#schedule">Schedule</a></li> -->
-          <li><a href="index.html#venue">Venue</a></li>
-          <li><a href="index.html#supporters">Sponsors</a></li>
-          <!-- <li class="register-now"><a href="#">Register Now</a></li> -->
-        </ul>
-      </nav><!-- #nav-menu-container -->
-    </div>
-  </header><!-- #header -->
-
-  <!--==========================
-    Intro Section
-  ============================-->
-  <section id="intro">
-    <div class="intro-container wow fadeIn" id="registration">
-      <img src="img/logo.png" alt="BSidesOK 12" style="max-height:45%;">
-      <!-- <h1 class="mb-4 pb-0">The Annual<br><span>BSidesOK</span> Conference</h1> -->
-
-
-
-      <div class="centered"><div class="neon" style="font-family: arial, sans">BSidesOK 2020</div></div>
-
-<svg >
-<defs>
-  
-   <filter id="stroke">
-     <feMorphology operator="dilate" radius="1" 
-in="SourceGraphic" result="outside" />
-     <feMorphology operator="dilate" radius="2" 
-in="outside" result="thickened" />
-     <feComposite operator="out" in2="SourceGraphic" in="thickened" result="stroke"/>
-     
-  </filter>
-  
-  <filter id="inner-glow" >
-    <feFlood flood-color="#e10b8d"/>
-    <feComposite in2="SourceAlpha" operator="out"/>
-    <feGaussianBlur stdDeviation="0.5" result="blur"/>
-    <feComposite operator="atop" in2="SourceGraphic"/>
-    
-</filter>
-  
-  <filter id="outer-glow" >
-    <!-- Thicken out the original shape -->
-    <feMorphology operator="dilate" radius="2" in="SourceAlpha" result="thicken" />
-
-    <!-- Use a gaussian blur to create the soft blurriness of the glow -->
-    <feGaussianBlur in="thicken" stdDeviation="5" result="blurred" />
-
-    <!-- Change the colour -->
-    <feFlood  flood-color="#db0273" result="glowColor" />
-
-    <!-- Color in the glows -->
-    <feComposite in="glowColor" in2="blurred" operator="in" result="softGlow_colored" />
-
-    <!--  Layer the effects together -->
-    <feMerge>
-      <feMergeNode in="softGlow_colored"/>
-      <feMergeNode in="SourceGraphic"/>
-    </feMerge>
-
-  </filter>
-  
-  <filter id="outer-glow1" >
-    <!-- Thicken out the original shape -->
-    <feMorphology operator="dilate" radius="20" in="SourceAlpha" result="thicken" />
-
-    <!-- Use a gaussian blur to create the soft blurriness of the glow -->
-    <feGaussianBlur in="thicken" stdDeviation="25" result="blurred" />
-
-    <!-- Change the colour -->
-    <feFlood  flood-color="#530139" result="glowColor" />
-
-    <!-- Color in the glows -->
-    <feComposite in="glowColor" in2="blurred" operator="in" result="softGlow_colored" />
-
-    <!--  Layer the effects together -->
-    <feMerge>
-      <feMergeNode in="softGlow_colored"/>
-      <feMergeNode in="SourceGraphic"/>
-    </feMerge>
-
-  </filter>
-  </defs>
-  
-  
-</svg>
-
-
-
-
-
-
-
-
-      <p class="mb-4 pb-0"><span>Conference</span> April 10th, 2020 - Glenpool Conference Center</p>
-      <!-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
-        data-autoplay="true"></a> -->
-      <a href="https://www.papercall.io/bsidesok2020-cfp" class="about-btn scrollto">Call for Papers</a>
-    </div>
-  </section>
-
-  <main id="main">
-
-    <!--==========================
-      About Section
-    ============================-->
-    <section id="about">
-      <div class="container" id="about-conf">
-        <div class="row">
-          <div class="col-lg-6">
-            <h2>About The Conference</h2>
-            <p>This is an information security conference, hosted by ISSA-OK and ISSA-OKC and located in central Oklahoma. Members of the information security community will be presenting on their topics of expertise at this one day event!</p>
-          </div>
-          <div class="col-lg-3">
-            <h3>Where</h3>
-            <p>Glenpool Conference Center</p>
-            <p>12205 S Yukon Ave, Glenpool, OK 74033</p>
-          </div>
-          <div class="col-lg-3">
-            <h3>When</h3>
-            <p>April<br>April 10th, 2020</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!--==========================
-      Schedule Section
-    ============================-->
-    <section id="schedule" class="section-with-bg">
-      <!-- <div class="container wow fadeInUp"> -->
-        <div class="wow fadeInUp">
-        <div class="section-header">
-
-
-          <div class="screen">
-
-            <script type="text/javascript">
-              
-              window.addEventListener("DOMContentLoaded", () => {
-    
-    const screenText = document.querySelectorAll("p"),
-          delay = [100, 2200, 3200, 4200, 5700, 7200];
-
-    screenText.forEach((text, i) => setTimeout(() => text.classList.add("show"), delay[2]));
-    
-});
-
-            </script>
-
-            <p>greetings professor falken</p>
-
-            <p>hello</p>
-
-            <div>
-
-                <p>A strange game.</p>
-
-                <p>The only winning move is</p>
-
-                <p>not to play.</p>
-
-            </div>
-
-            <p>How about a nice game of chess?</p>
-
-        </div>
-
-
-
-
-
-
-
-          <br>
-          <h2>Call for Papers</h2>
-          <p>Would you like to present a talk to Oklahoma's premier security conference?</p>
-          <a href="https://www.papercall.io/bsidesok2020-cfp" class="button">Call for Papers</a>
-        </div>
-
-        <!--==========================
-          Morning Section
-        ============================-->
-
-
-
-        </div>
-
-
-    </section>
-
-
-
-
-
-
-    <!--==========================
-      Speakers Section
-    ============================-->
-    <section id="speakers" class="wow fadeInUp">
-      <div class="container">
-        <div class="section-header">
-          <h2>Event Trainers</h2>
-          <p>Here are some of our trainers</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6">
-            <div class="speaker">
-              <img src="img/sweaney-p.jpg" width="400px" alt="Speaker 1" class="img-fluid">
-              <div class="details">
-                <!-- <h3><a href="speaker-details.html">Nathan Sweaney</a></h3> -->
-                <h3>Nathan Sweaney</h3>
-                <p>Network Penetration Testing</p>
-                <div class="social">
-                  <a href=""><i class="fa fa-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="speaker">
-              <img src="img/wall-p.jpg" alt="Speaker 2" class="img-fluid">
-              <div class="details">
-                <h3>Kristopher Wall</h3>
-
-                <p>Web App Pentesting</p>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="speaker">
-              <img src="img/moss-p.jpg" alt="Speaker 3" class="img-fluid">
-              <div class="details">
-                <h3><a href="speaker-details.html">Aaron Moss</a></h3>
-                <p>Exploit Development</p>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="speaker">
-              <img src="img/gough-p.jpg" width="400px" alt="Speaker 5" class="img-fluid">
-              <div class="details">
-                <h3><a href="speaker-details.html">Michael Gough</a></h3>
-                <p>Malware Analysis</p>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="speaker">
-              <img src="img/kimmitt-p.jpg" alt="Speaker 6" class="img-fluid">
-              <div class="details">
-                <h3><a href="speaker-details.html">Jonathan Kimmitt</a></h3>
-                <p>Incident Response</p>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section>
-
-
-
-
-    <!--==========================
-      Venue Section
-    ============================-->
-    <section id="venue" class="wow fadeInUp">
-
-      <div class="container-fluid">
-
-        <div class="section-header">
-          <h2>Event Venue</h2>
-          <p>Event venue location info and gallery</p>
-        </div>
-
-        <div class="row no-gutters">
-          <div class="col-lg-6 venue-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3228.5136673943025!2d-96.02014978473288!3d35.98331378012496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b69770301b9e3b%3A0x52b1255767b5b473!2sGlenpool%20Conference%20Center!5e0!3m2!1sen!2sus!4v1574214264072!5m2!1sen!2sus"  frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-          </div>
-
-          <div class="col-lg-6 venue-info">
-            <div class="row justify-content-center">
-              <div class="col-11 col-lg-8">
-                <h3>Glenpool Conference Center</h3>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-
-
-    <!--==========================
-      Sponsors Section
-    ============================-->
-    <!-- <section id="supporters" class="section-with-bg wow fadeInUp">
-
-      <div class="container">
-
-        <div class="section-header" style="text-align: center;">
-          <h2>Diamond Sponsors</h2>
-        </div>
-
-        <div class="row no-gutters supporters-wrap clearfix">
-
-          <div class="col-lg-12 col-md-12 col-xs-12">
-            <div class="supporter-logo">
-              <a href="https://www.sentinelone.com"><img src="img/supporters/sentinel.png" class="img-fluid" alt="SentinelOne"><a>
-            </div>
-          </div>
-        </div>
-
-
-
-
-        <div class="section-header" style="text-align: center; padding-top: 3%;">
-          <h2>Platinum Sponsors</h2>
-        </div>
-
-        <div class="row no-gutters supporters-wrap clearfix">
-
-          <div class="col-lg-6 col-md-6 col-xs-12">
-            <div class="supporter-logo">
-              <a href="https://www.cyberark.com/"><img src="img/supporters/cyberark.png" class="img-fluid" alt="CyberArk"><a>
-            </div>
-          </div>
-
-          <div class="col-lg-6 col-md-6 col-xs-12">
-            <div class="supporter-logo">
-              <a href="https://americanfidelity.com/"><img src="img/supporters/americanfidelity.png" class="img-fluid" alt="American Fidelity"><a>
-            </div>
-          </div>
-
-        </div>
-
-
-
-
-
-
-
-        <div class="section-header" style="text-align: center; padding-top: 3%;">
-          <h2>Gold Sponsors</h2>
-        </div>
-
-        <div class="row no-gutters supporters-wrap clearfix">
-
-          <div class="col-lg-6 col-md-6 col-xs-12">
-            <div class="supporter-logo">
-              <a href="https://utulsa.edu/"><img src="img/supporters/university-tulsa.gif" class="img-fluid" alt="University of Tulsa"><a>
-            </div>
-          </div>
-
-          <div class="col-lg-6 col-md-6 col-xs-12">
-            <div class="supporter-logo">
-              <a href="https://www.paloaltonetworks.com/"><img src="img/supporters/paloalto.png" class="img-fluid" alt="Palo Alto Networks"><a>
-            </div>
-          </div>
-
-          <div class="col-lg-6 col-md-6 col-xs-12">
-            <div class="supporter-logo">
-              <a href="https://truedigitalsecurity.com/"><img src="img/supporters/true_digital.png" class="img-fluid" alt="True Digital Security"><a>
-            </div>
-          </div>
-
-          <div class="col-lg-6 col-md-6 col-xs-12">
-            <div class="supporter-logo">
-              <a href="https://www.fortinet.com/"><img src="img/supporters/fortinet.png" class="img-fluid" alt="Fortinet"><a>
-            </div>
-          </div>
-
-        </div>
-
-
-        <div class="section-header" style="text-align: center; padding-top: 3%;">
-          <h2>After Party Sponsors</h2>
-        </div>
-
-        <div class="row no-gutters supporters-wrap clearfix">
-
-          <div class="col-lg-12 col-md-12 col-xs-12">
-            <div class="supporter-logo">
-              <a href="https://optiv.com"><img src="img/supporters/optiv.png" class="img-fluid" alt="Optiv"><a>
-            </div>
-          </div>
-
-        </div>
-
-
-
-
-
-
-
-
-
-        <div class="section-header" style="text-align: center; padding-top: 3%;">
-          <h2>Silver Sponsors</h2>
-        </div>
-
-        <div class="row no-gutters supporters-wrap clearfix">
-
-          <div class="col-lg-6 col-md-6 col-xs-12">
-            <div class="supporter-logo">
-              <a href="https://www.roberthalf.com/"><img src="img/supporters/roberthalf.png" class="img-fluid" alt="Robert Half Technology"><a>
-            </div>
-          </div>
-
-
-		  <div class="col-lg-6 col-md-6 col-xs-12">
-            <div class="supporter-logo">
-              <a href="https://www.rapid7.com/"><img src="img/supporters/rapid7.png" class="img-fluid" alt="Rapid 7"><a>
-            </div>
-          </div>
-
-
-          <div class="col-lg-6 col-md-6 col-xs-12">
-            <div class="supporter-logo">
-              <a href="https://www.oc.edu/"><img src="img/supporters/oc.png" class="img-fluid" alt="Oklahoma Christian University"><a>
-            </div>
-          </div>
-
-
-
-        </div>
-
-
-
-
-
-        <div class="section-header" style="text-align: center; padding-top: 3%;">
-          <h2>Bronze Sponsors</h2>
-        </div>
-
-        <div class="row no-gutters supporters-wrap clearfix">
-
-          <div class="col-lg-4 col-md-4 col-xs-12">
-            <div class="supporter-logo">
-              <a href="http://www.aliasforensics.com/"><img src="img/supporters/alias.png" class="img-fluid" alt="Alias Forensics"><a>
-            </div>
-          </div>
-
-		  <div class="col-lg-4 col-md-4 col-xs-12">
-            <div class="supporter-logo">
-              <a href="https://gosecuritypro.com"><img src="img/supporters/gosecpro.png" class="img-fluid" alt="Go Pro Security"><a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-4 col-xs-12">
-            <div class="supporter-logo">
-              <a href="https://www.setsolutions.com"><img src="img/supporters/setsolutions.png" class="img-fluid" alt="Set Security"><a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-4 col-xs-12">
-            <div class="supporter-logo">
-              <a href="https://www.silverfort.com/"><img src="img/supporters/silverfort.png" class="img-fluid" alt="SILVERFORT"><a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-4 col-xs-12">
-            <div class="supporter-logo">
-              <a href="https://www.varonis.com/"><img src="img/supporters/varonis.png" class="img-fluid" alt="Varonis"><a>
-            </div>
-          </div>
-
-		  <div class="col-lg-4 col-md-4 col-xs-12">
-            <div class="supporter-logo">
-              <a href="https://www.crossroadsinfosec.com/"><img src="img/supporters/crossroads.jpg" style="height:145px !important;" class="img-fluid" alt="Crossroads Information Security"><a>
-            </div>
-          </div>
-
-		</div>
-
-
-
-
-
-
-		  <div class="section-header" style="text-align: center; padding-top: 3%;">
-          <h2>In Kind Sponsors</h2>
-        </div>
-
-        <div class="row no-gutters supporters-wrap clearfix">
-
-          <div class="col-lg-6 col-md-6 col-xs-12">
-            <div class="supporter-logo">
-              <a href="https://www.exaptive.com/"><img src="img/supporters/exaptive.png" class="img-fluid" style="height:145px !important;" alt="exaptive"><a>
-            </div>
-          </div>
-
-          <div class="col-lg-6 col-md-6 col-xs-12">
-            <div class="supporter-logo">
-              <a href="https://onenet.net/"><img src="img/supporters/onenet.jpg" class="img-fluid"  alt="OneNet"><a>
-            </div>
-          </div>
-
-
-
-
-
-        </div>
-
-
-
-      </div>
-
-    </section> -->
-
-
-
-
-
-
-  </main>
-
-
-  <!--==========================
-    Footer
-  ============================-->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-          <!-- <div class="col-lg-12 col-md-12 footer-info">
-            <img src="img/logo.jpg" alt="BSidesOK">
-            <p>In alias aperiam. Placeat tempore facere. Officiis voluptate ipsam vel eveniet est dolor et totam porro. Perspiciatis ad omnis fugit molestiae recusandae possimus. Aut consectetur id quis. In inventore consequatur ad voluptate cupiditate debitis accusamus repellat cumque.</p>
-          </div> -->
-
-          <!-- <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="fa fa-angle-right"></i> <a href="#">Home</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">About us</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">Services</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="fa fa-angle-right"></i> <a href="#">Home</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">About us</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">Services</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>Contact Us</h4>
-            <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
-            </p>
-
-            <div class="social-links">
-              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-            </div>
-
-          </div> -->
-
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong>BSidesOK</strong>. All Rights Reserved
-      </div>
-
-      <div class="credits">
-        <!--
-          All the links in the footer should remain intact.
-          You can delete the links only if you purchased the pro version.
-          Licensing information: https://bootstrapmade.com/license/
-          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=TheEvent
-        -->
-        Brought to you by <a href="https://oklahoma.issa.org/">ISSA-OK</a> and <a href="https://www.meetup.com/Oklahoma-City-ISSA/">ISSA-OKC</a>      </div>
-
-    </div>
-  </footer><!-- #footer -->
-
-  <a href="index.html#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
-
-  <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/superfish/hoverIntent.js"></script>
-  <script src="lib/superfish/superfish.min.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <script src="lib/venobox/venobox.min.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-  <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
-
-  <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
-</body>
-
-</html>
+<!-- saved from url=(0032)http://staging.urbanscouter.com/ -->
+<html lang="en-US" class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="pingback" href="http://staging.urbanscouter.com/xmlrpc.php">
+
+	<script type="text/javascript">
+		document.documentElement.className = 'js';
+	</script>
+
+	<script>var et_site_url='http://staging.urbanscouter.com';var et_post_id='5';function et_core_page_resource_fallback(a,b){"undefined"===typeof b&&(b=a.sheet.cssRules&&0===a.sheet.cssRules.length);b&&(a.onerror=null,a.onload=null,a.href?a.href=et_site_url+"/?et_core_page_resource="+a.id+et_post_id:a.src&&(a.src=et_site_url+"/?et_core_page_resource="+a.id+et_post_id))}
+</script><title>BSidesOk | BSidesOK 2020</title>
+<link rel="dns-prefetch" href="http://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="http://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="BSidesOk » Feed" href="http://staging.urbanscouter.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="BSidesOk » Comments Feed" href="http://staging.urbanscouter.com/comments/feed/">
+<meta content="Divi v.4.1" name="generator"><link rel="stylesheet" id="dashicons-css" href="./content_files/dashicons.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="admin-bar-css" href="./content_files/admin-bar.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="./content_files/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="divi-style-css" href="./content_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="et-builder-googlefonts-cached-css" href="./content_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="duplicate-post-css" href="./content_files/duplicate-post.css" type="text/css" media="all">
+<script type="text/javascript" src="./content_files/jquery.js.download"></script>
+<script type="text/javascript" src="./content_files/jquery-migrate.min.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var et_core_api_spam_recaptcha = {"site_key":"","page_action":{"action":"staging.urbanscouter.com"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./content_files/recaptcha.js.download"></script>
+<link rel="https://api.w.org/" href="http://staging.urbanscouter.com/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://staging.urbanscouter.com/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 5.3.2">
+<link rel="canonical" href="http://staging.urbanscouter.com/">
+<link rel="shortlink" href="http://staging.urbanscouter.com/">
+<link rel="alternate" type="application/json+oembed" href="http://staging.urbanscouter.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fstaging.urbanscouter.com%2F">
+<link rel="alternate" type="text/xml+oembed" href="http://staging.urbanscouter.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fstaging.urbanscouter.com%2F&amp;format=xml">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"><link rel="shortcut icon" href="http://staging.urbanscouter.com/"><style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+	<link rel="stylesheet" id="et-core-unified-5-cached-inline-styles" href="./content_files/et-core-unified-5-1578912360586.min.css" onerror="et_core_page_resource_fallback(this, true)" onload="et_core_page_resource_fallback(this)"><style>[data-columns]::before{visibility:hidden;position:absolute;font-size:1px;}</style><style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style></head>
+<body class="home page-template-default page page-id-5 logged-in admin-bar et_pb_button_helper_class et_fullwidth_nav et_non_fixed_nav et_show_nav et_hide_primary_logo et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_header_style_left et_pb_footer_columns4 et_cover_background et_pb_gutter windows et_pb_gutters3 et_pb_pagebuilder_layout et_no_sidebar et_divi_theme et-db et_minified_js et_minified_css customize-support chrome vsc-initialized" style="overflow-x: hidden;">
+	<div id="page-container" style="overflow-y: hidden;">
+
+	
+	
+			<header id="main-header" data-height-onload="80" data-height-loaded="true" data-fixed-height-onload="80">
+			<div class="container clearfix et_menu_container">
+							<div class="logo_container">
+					<span class="logo_helper"></span>
+					<a href="http://staging.urbanscouter.com/">
+						<img src="./content_files/logo.png" alt="BSidesOk" id="logo" data-height-percentage="54" data-actual-width="980" data-actual-height="600">
+					</a>
+				</div>
+							<div id="et-top-navigation" data-height="66" data-fixed-height="40" style="padding-left: 30px;">
+											<nav id="top-menu-nav">
+						<ul id="top-menu" class="nav"><li id="menu-item-50" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50"><a href="http://staging.urbanscouter.com/#home">Home</a></li>
+<li id="menu-item-41" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41"><a href="http://staging.urbanscouter.com/#registration">Registration</a></li>
+<li id="menu-item-40" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40"><a href="http://staging.urbanscouter.com/#cfp">CFP</a></li>
+<li id="menu-item-42" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42"><a href="http://staging.urbanscouter.com/#conference">Conference</a></li>
+<li id="menu-item-43" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43"><a href="http://staging.urbanscouter.com/#training">Training</a></li>
+<li id="menu-item-44" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44"><a href="http://staging.urbanscouter.com/#venue">Venue</a></li>
+<li id="menu-item-45" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-45"><a href="http://staging.urbanscouter.com/#sponsors">Sponsors</a></li>
+</ul>						</nav>
+					
+					
+					
+					
+					<div id="et_mobile_nav_menu">
+				<div class="mobile_nav closed">
+					<span class="select_page">Select Page</span>
+					<span class="mobile_menu_bar mobile_menu_bar_toggle"></span>
+				<ul id="mobile_menu" class="et_mobile_menu"><li id="menu-item-50" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50 et_first_mobile_item"><a href="http://staging.urbanscouter.com/#home">Home</a></li>
+<li id="menu-item-41" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41"><a href="http://staging.urbanscouter.com/#registration">Registration</a></li>
+<li id="menu-item-40" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40"><a href="http://staging.urbanscouter.com/#cfp">CFP</a></li>
+<li id="menu-item-42" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42"><a href="http://staging.urbanscouter.com/#conference">Conference</a></li>
+<li id="menu-item-43" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43"><a href="http://staging.urbanscouter.com/#training">Training</a></li>
+<li id="menu-item-44" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44"><a href="http://staging.urbanscouter.com/#venue">Venue</a></li>
+<li id="menu-item-45" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-45"><a href="http://staging.urbanscouter.com/#sponsors">Sponsors</a></li>
+</ul></div>
+			</div>				</div> <!-- #et-top-navigation -->
+			</div> <!-- .container -->
+			<div class="et_search_outer">
+				<div class="container et_search_form_container">
+					<form role="search" method="get" class="et-search-form" action="http://staging.urbanscouter.com/">
+					<input type="search" class="et-search-field" placeholder="Search …" value="" name="s" title="Search for:">					</form>
+					<span class="et_close_search_field"></span>
+				</div>
+			</div>
+		</header> <!-- #main-header -->
+			<div id="et-main-area">
+	
+<div id="main-content">
+
+
+			
+				<article id="post-5" class="post-5 page type-page status-publish has-post-thumbnail hentry">
+
+				
+					<div class="entry-content">
+					<div id="et-boc" class="et-boc">
+			
+		<div class="et-l et-l--post">
+			<div class="et_builder_inner_content et_pb_gutters3">
+		<div id="home" class="et_pb_section et_pb_section_0 et_pb_with_background et_section_regular et_pb_section_sticky et_pb_section_sticky_mobile">
+				
+				
+				
+				
+					<div class="et_pb_row et_pb_row_0 et_pb_equal_columns et-last-child">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_dark et_had_animation" style="">
+				
+				
+				<div class="et_pb_text_inner"><h1>BSidesOK 2020 – April 10th</h1></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_text et_pb_text_1  et_pb_text_align_left et_pb_bg_layout_dark et_had_animation" style="">
+				
+				
+				<div class="et_pb_text_inner"><p>Training Classes – April 8th &amp; 9th</p></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_divider et_pb_divider_0 et_pb_divider_position_center et_pb_space et_had_animation" style=""><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_text et_pb_text_2  et_pb_text_align_left et_pb_bg_layout_dark et_had_animation" style="">
+				
+				
+				<div class="et_pb_text_inner"><p>Oklahoma’s Premiere Information Security Conference</p>
+<p>Glenpool Conference Center – 12205 S Yukon Ave, Glenpool Oklahoma</p></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_button_module_wrapper et_pb_button_0_wrapper  et_pb_module et_had_animation" style="">
+				<a class="et_pb_button et_pb_button_0 et_pb_bg_layout_light" href="https://bsidesok2020.eventbrite.com/">Registration Info</a>
+			</div>
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_2 et_pb_column_1  et_pb_css_mix_blend_mode_passthrough et-last-child et_pb_row_sticky">
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_0 et_pb_image_sticky et-animated et_had_animation" style="">
+				
+				
+				<span class="et_pb_image_wrap "><img src="./content_files/logo.png" alt="" title="" srcset="http://staging.urbanscouter.com/wp-content/uploads/2020/01/logo.png 980w, http://staging.urbanscouter.com/wp-content/uploads/2020/01/logo-480x294.png 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 980px, 100vw"></span>
+			</div>
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row -->
+				
+				
+			</div> <!-- .et_pb_section --><div id="registration" class="et_pb_section et_pb_section_1 et_pb_with_background et_section_regular">
+				
+				
+				
+				
+					<div class="et_pb_row et_pb_row_1">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_2  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_3  et_pb_text_align_center et_pb_bg_layout_dark">
+				
+				
+				<div class="et_pb_text_inner"><h1>Pricing &amp; Registration&nbsp;</h1></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_text et_pb_text_4  et_pb_text_align_center et_pb_bg_layout_dark">
+				
+				
+				<div class="et_pb_text_inner"><p>BSidesOK 2020 is April 8th – 10th. We’re pleased to offer training classes on April 8th &amp; April 9th.</p>
+<p>Conference with several information security tracks is April 10th!</p></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_button_module_wrapper et_pb_button_1_wrapper et_pb_button_alignment_center et_pb_module et_had_animation" style="">
+				<a class="et_pb_button et_pb_button_1 et_pb_bg_layout_light" href="https://forms.gle/fPAfjs8UJeFr1UH97">Contact Us</a>
+			</div>
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row -->
+				
+				
+			</div> <!-- .et_pb_section --><div class="et_pb_section et_pb_section_2 et_pb_with_background et_section_regular">
+				
+				
+				
+				
+					<div class="et_pb_row et_pb_row_2">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_3  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_with_border et_pb_module et_pb_pricing_tables_0 et_hover_enabled et_pb_pricing clearfix et_pb_pricing_3 et_pb_no_featured_in_first_row et_pb_pricing_no_bullet">
+				
+				
+				<div class="et_pb_pricing_table_wrap">
+					<div class="et_pb_pricing_table et_pb_pricing_table_0">
+				
+				
+				<div class="et_pb_pricing_heading">
+					<h2 class="et_pb_pricing_title">1 Day Training Class</h2>
+					<span class="et_pb_best_value">April 8th &amp; 9th</span>
+				</div> <!-- .et_pb_pricing_heading -->
+				<div class="et_pb_pricing_content_top">
+					<span class="et_pb_et_price"><span class="et_pb_sum">$250</span></span>
+				</div> <!-- .et_pb_pricing_content_top -->
+				<div class="et_pb_pricing_content">
+					<ul class="et_pb_pricing"><li><span>Cyber Attacks Against the Organization</span></li><li><span>Privacy Compliance for IT, Auditors, &amp; Leaders</span></li></ul>
+				</div> <!-- .et_pb_pricing_content -->
+				<div class="et_pb_button_wrapper"><a class="et_pb_button et_pb_pricing_table_button" href="http://staging.urbanscouter.com/#">Register Online</a></div>
+			</div><div class="et_pb_pricing_table et_pb_pricing_table_1">
+				
+				
+				<div class="et_pb_pricing_heading">
+					<h2 class="et_pb_pricing_title">Conference</h2>
+					<span class="et_pb_best_value">April 10th</span>
+				</div> <!-- .et_pb_pricing_heading -->
+				<div class="et_pb_pricing_content_top">
+					<span class="et_pb_et_price"><span class="et_pb_sum">Free</span></span>
+				</div> <!-- .et_pb_pricing_content_top -->
+				<div class="et_pb_pricing_content">
+					<ul class="et_pb_pricing"><li><span>Multiple Tracks</span></li><li><span>Lunch Provided</span></li><li><span>Beer &amp; Spirits</span></li><li><span>Tea, Coffee, &amp; Water</span></li><li><span>Swag</span></li></ul>
+				</div> <!-- .et_pb_pricing_content -->
+				<div class="et_pb_button_wrapper"><a class="et_pb_button et_pb_pricing_table_button" href="http://staging.urbanscouter.com/#">Register Online</a></div>
+			</div><div class="et_pb_pricing_table et_pb_pricing_table_2">
+				
+				
+				<div class="et_pb_pricing_heading">
+					<h2 class="et_pb_pricing_title">2 Day Training Class</h2>
+					<span class="et_pb_best_value">April 8th &amp; 9th</span>
+				</div> <!-- .et_pb_pricing_heading -->
+				<div class="et_pb_pricing_content_top">
+					<span class="et_pb_et_price"><span class="et_pb_sum">$500</span></span>
+				</div> <!-- .et_pb_pricing_content_top -->
+				<div class="et_pb_pricing_content">
+					<ul class="et_pb_pricing"><li><span>Web Application Pentesting</span></li><li><span>Network Pentesting</span></li><li><span>Malware Analysis</span></li><li><span>Exploit Development</span></li></ul>
+				</div> <!-- .et_pb_pricing_content -->
+				<div class="et_pb_button_wrapper"><a class="et_pb_button et_pb_pricing_table_button" href="http://staging.urbanscouter.com/#">Register Online</a></div>
+			</div>
+				</div>
+			</div>
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row -->
+				
+				
+			</div> <!-- .et_pb_section --><div class="et_pb_section et_pb_section_3 et_section_regular">
+				
+				
+				
+				
+					<div class="et_pb_row et_pb_row_3">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_4  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_1 et-animated et_had_animation" style="">
+				
+				
+				<span class="et_pb_image_wrap "><img src="./content_files/hacktheplanet.jpg" alt="" title="" srcset="http://staging.urbanscouter.com/wp-content/uploads/2020/01/hacktheplanet.jpg 700w, http://staging.urbanscouter.com/wp-content/uploads/2020/01/hacktheplanet-480x337.jpg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 700px, 100vw"></span>
+			</div>
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row -->
+				
+				
+			</div> <!-- .et_pb_section --><div id="conference" class="et_pb_section et_pb_section_4 et_pb_with_background et_section_regular">
+				
+				
+				
+				
+					<div class="et_pb_row et_pb_row_4 et_pb_gutters1">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_5  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_5  et_pb_text_align_left et_pb_bg_layout_dark">
+				
+				
+				<div class="et_pb_text_inner"><h1><span style="color: #4646c4;">BSidesOK 2020</span></h1></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_divider et_pb_divider_1 et_pb_divider_position_center et_pb_space"><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_text et_pb_text_6  et_pb_text_align_left et_pb_bg_layout_dark et_had_animation" style="">
+				
+				
+				<div class="et_pb_text_inner"><p>Wow. It’s really here! So many memories and so many more to make in 2020. Stay tuned for our conference schedule to be released. Want to speak? Check out our Call-for-Papers. Want a booth? Check out our Sponsorship Kit. Ready to sponsor? Use the Contact Us link below.</p>
+<p>Looking for the speaker schedule? Please hold tight! We’re still holding the CFP!&nbsp;</p></div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row --><div class="et_pb_row et_pb_row_5">
+				<div class="et_pb_column et_pb_column_1_3 et_pb_column_6  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				<div class="et_pb_button_module_wrapper et_pb_button_2_wrapper et_pb_button_alignment_center et_pb_module et_had_animation" style="">
+				<a class="et_pb_button et_pb_button_2 et_pb_bg_layout_light" href="https://forms.gle/fPAfjs8UJeFr1UH97">Contact Us</a>
+			</div>
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_3 et_pb_column_7  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				<div class="et_pb_button_module_wrapper et_pb_button_3_wrapper et_pb_button_alignment_center et_pb_module et_had_animation" style="">
+				<a class="et_pb_button et_pb_button_3 et_pb_bg_layout_light" href="https://www.papercall.io/bsidesok2020-cfp">Call for Papers</a>
+			</div>
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_3 et_pb_column_8  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_button_module_wrapper et_pb_button_4_wrapper et_pb_button_alignment_center et_pb_module et_had_animation" style="">
+				<a class="et_pb_button et_pb_button_4 et_pb_bg_layout_light" href="https://www.bsidesok.com/docs/BSidesOK_2020_Sponsorship_Kit.pdf">Sponsorship Kit</a>
+			</div>
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row --><div class="et_pb_row et_pb_row_6 et_pb_gutters1">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_9  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_2 et-animated et_had_animation" style="">
+				
+				
+				<span class="et_pb_image_wrap "><img src="./content_files/conference_illustration_02.png" alt="" title="" srcset="http://staging.urbanscouter.com/wp-content/uploads/2020/01/conference_illustration_02.png 800w, http://staging.urbanscouter.com/wp-content/uploads/2020/01/conference_illustration_02-480x354.png 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 800px, 100vw"></span>
+			</div>
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_2 et_pb_column_10  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_7  et_pb_text_align_center et_pb_bg_layout_dark et_had_animation" style="">
+				
+				
+				<div class="et_pb_text_inner"><h4>Panels &amp; Tabletop Exercises</h4>
+<p>We’ll be hosting a top notch panel this year. Many important figures from around Oklahoma will be participating. Also, we’re proud to announce we’ll be hosting a tabletop exercise that’s not only new but engages you, the audience.&nbsp;</p></div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row --><div class="et_pb_row et_pb_row_7 et_pb_gutters1">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_11  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_8  et_pb_text_align_center et_pb_bg_layout_dark et_had_animation" style="">
+				
+				
+				<div class="et_pb_text_inner"><h4>Training Classes</h4>
+<p>We’re pleased to offer several training classes. Several courses are geared for a hands-on experience meant to introduce students and professionals to the exciting world of offensive several. The others are meant to give an in-depth look at the defending a organization and the information systems. Plus, we’ve got Michael Gough coming, and that guy is just brilliant.</p></div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_2 et_pb_column_12  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_3 et-animated et_had_animation" style="">
+				
+				
+				<span class="et_pb_image_wrap "><img src="./content_files/conference_illustration_03.png" alt="" title="" srcset="http://staging.urbanscouter.com/wp-content/uploads/2020/01/conference_illustration_03.png 800w, http://staging.urbanscouter.com/wp-content/uploads/2020/01/conference_illustration_03-480x485.png 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 800px, 100vw"></span>
+			</div>
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row --><div class="et_pb_row et_pb_row_8 et_pb_gutters1">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_13  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_4 et-animated et_had_animation" style="">
+				
+				
+				<span class="et_pb_image_wrap "><img src="./content_files/conference_illustration_04.png" alt="" title="" srcset="http://staging.urbanscouter.com/wp-content/uploads/2020/01/conference_illustration_04.png 800w, http://staging.urbanscouter.com/wp-content/uploads/2020/01/conference_illustration_04-480x433.png 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 800px, 100vw"></span>
+			</div>
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_2 et_pb_column_14  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_9  et_pb_text_align_center et_pb_bg_layout_dark et_had_animation" style="">
+				
+				
+				<div class="et_pb_text_inner"><h4>Tech Villages</h4>
+<p>Several tech villages will be making their return this year, inluding the College of Lockpicking, Hardware Hacking, and the Lego Kids. There’s even talk of an upcoming Capture-the-Flag, so stay tuned.</p></div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row -->
+				
+				
+			</div> <!-- .et_pb_section --><div id="training" class="et_pb_section et_pb_section_5 et_section_regular">
+				
+				
+				
+				
+					<div class="et_pb_row et_pb_row_9">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_15  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_10  et_pb_text_align_left et_pb_bg_layout_dark">
+				
+				
+				<div class="et_pb_text_inner"><h1>Classes &amp; <span style="color: #4646c4;">Trainers</span></h1></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_divider et_pb_divider_2 et_pb_divider_position_center et_pb_space"><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_text et_pb_text_11  et_pb_text_align_left et_pb_bg_layout_dark">
+				
+				
+				<div class="et_pb_text_inner"><p>We are pleased to provide several training classes ranging from intros to offensive security, to in-depth defensive analysis, to finally protective measures for your organization. We’ve got a little bit of everything here.</p></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_button_module_wrapper et_pb_button_5_wrapper  et_pb_module et_had_animation" style="">
+				<a class="et_pb_button et_pb_button_5 et_pb_bg_layout_light" href="https://bsidesok2020.eventbrite.com/">Register for Training</a>
+			</div>
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row -->
+				
+				
+			</div> <!-- .et_pb_section --><div class="et_pb_section et_pb_section_6 et_pb_with_background et_section_regular">
+				
+				
+				
+				
+					<div class="et_pb_row et_pb_row_10">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_16  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_5">
+				
+				
+				<span class="et_pb_image_wrap "><img src="./content_files/kimmitt.jpg" alt="" title="" srcset="http://staging.urbanscouter.com/wp-content/uploads/2020/01/kimmitt.jpg 500w, http://staging.urbanscouter.com/wp-content/uploads/2020/01/kimmitt-480x480.jpg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 500px, 100vw"></span>
+			</div><div class="et_pb_module et_pb_text et_pb_text_12  et_pb_text_align_center et_pb_bg_layout_light">
+				
+				
+				<div class="et_pb_text_inner"><p>Both April 8th &amp; April 9</p></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_text et_pb_text_13  et_pb_text_align_center et_pb_bg_layout_dark">
+				
+				
+				<div class="et_pb_text_inner"><h3>Jonathan Kimmitt</h3>
+<p>April 8th – Cyber Attacks Against the Organization</p>
+<p>&nbsp;</p>
+<p>April 9th – Privacy Compliance for IT, Auditors &amp; Leadership</p>
+<p>&nbsp;</p></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_button_module_wrapper et_pb_button_6_wrapper et_pb_button_alignment_center et_pb_module et_had_animation" style="">
+				<a class="et_pb_button et_pb_button_6 et_pb_bg_layout_light" href="https://bsidesok2020.eventbrite.com/">Register - 2 ONE DAY CLASSES</a>
+			</div>
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row --><div class="et_pb_row et_pb_row_11">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_17  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_6">
+				
+				
+				<span class="et_pb_image_wrap "><img src="./content_files/wall.jpg" alt="" title="" srcset="http://staging.urbanscouter.com/wp-content/uploads/2020/01/wall.jpg 500w, http://staging.urbanscouter.com/wp-content/uploads/2020/01/wall-480x480.jpg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 500px, 100vw"></span>
+			</div><div class="et_pb_module et_pb_text et_pb_text_14  et_pb_text_align_center et_pb_bg_layout_light">
+				
+				
+				<div class="et_pb_text_inner"><p>April 8th – 9th</p></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_text et_pb_text_15  et_pb_text_align_center et_pb_bg_layout_dark">
+				
+				
+				<div class="et_pb_text_inner"><h3>Kris Wall</h3>
+<p>Web Application Penetration Testing</p></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_button_module_wrapper et_pb_button_7_wrapper et_pb_button_alignment_center et_pb_module et_had_animation" style="">
+				<a class="et_pb_button et_pb_button_7 et_pb_bg_layout_light" href="https://bsidesok2020.eventbrite.com/">Register - 2 Day Class</a>
+			</div>
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_2 et_pb_column_18  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_7">
+				
+				
+				<span class="et_pb_image_wrap "><img src="./content_files/sweaney.png" alt="" title="" srcset="http://staging.urbanscouter.com/wp-content/uploads/2020/01/sweaney.png 300w, http://staging.urbanscouter.com/wp-content/uploads/2020/01/sweaney-150x150.png 150w" sizes="(max-width: 300px) 100vw, 300px"></span>
+			</div><div class="et_pb_module et_pb_text et_pb_text_16  et_pb_text_align_center et_pb_bg_layout_light">
+				
+				
+				<div class="et_pb_text_inner"><p>April 8th – 9th</p></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_text et_pb_text_17  et_pb_text_align_center et_pb_bg_layout_dark">
+				
+				
+				<div class="et_pb_text_inner"><h3>Nathan Sweaney</h3>
+<p>Network Penetration Testing</p></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_button_module_wrapper et_pb_button_8_wrapper et_pb_button_alignment_center et_pb_module et_had_animation" style="">
+				<a class="et_pb_button et_pb_button_8 et_pb_bg_layout_light" href="https://bsidesok2020.eventbrite.com/">Register - 2 Day Class</a>
+			</div>
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row --><div class="et_pb_row et_pb_row_12">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_19  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_8">
+				
+				
+				<span class="et_pb_image_wrap "><img src="./content_files/gough.png" alt="" title="" srcset="http://staging.urbanscouter.com/wp-content/uploads/2020/01/gough.png 300w, http://staging.urbanscouter.com/wp-content/uploads/2020/01/gough-150x150.png 150w" sizes="(max-width: 300px) 100vw, 300px"></span>
+			</div><div class="et_pb_module et_pb_text et_pb_text_18  et_pb_text_align_center et_pb_bg_layout_light">
+				
+				
+				<div class="et_pb_text_inner"><p>April 8th – 9th</p></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_text et_pb_text_19  et_pb_text_align_center et_pb_bg_layout_dark">
+				
+				
+				<div class="et_pb_text_inner"><h3>Michael Gough</h3>
+<p>Malware Discovery &amp; Analysis</p></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_button_module_wrapper et_pb_button_9_wrapper et_pb_button_alignment_center et_pb_module et_had_animation" style="">
+				<a class="et_pb_button et_pb_button_9 et_pb_bg_layout_light" href="https://bsidesok2020.eventbrite.com/">Register - 2 Day Class</a>
+			</div>
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_2 et_pb_column_20  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_9">
+				
+				
+				<span class="et_pb_image_wrap "><img src="./content_files/moss.jpg" alt="" title="" srcset="http://staging.urbanscouter.com/wp-content/uploads/2020/01/moss.jpg 450w, http://staging.urbanscouter.com/wp-content/uploads/2020/01/moss-300x300.jpg 300w, http://staging.urbanscouter.com/wp-content/uploads/2020/01/moss-150x150.jpg 150w" sizes="(max-width: 450px) 100vw, 450px"></span>
+			</div><div class="et_pb_module et_pb_text et_pb_text_20  et_pb_text_align_center et_pb_bg_layout_light">
+				
+				
+				<div class="et_pb_text_inner"><p>April 8th – 9th</p></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_text et_pb_text_21  et_pb_text_align_center et_pb_bg_layout_dark">
+				
+				
+				<div class="et_pb_text_inner"><h3>Aaron Moss</h3>
+<p>Exploit Development</p></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_button_module_wrapper et_pb_button_10_wrapper et_pb_button_alignment_center et_pb_module et_had_animation" style="">
+				<a class="et_pb_button et_pb_button_10 et_pb_bg_layout_light" href="https://bsidesok2020.eventbrite.com/">Register - 2 Day Class</a>
+			</div>
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row -->
+				
+				
+			</div> <!-- .et_pb_section --><div class="et_pb_section et_pb_section_7 et_section_regular">
+				
+				
+				
+				
+					<div class="et_pb_row et_pb_row_13">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_21  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				<div id="cfp" class="et_pb_module et_pb_text et_pb_text_22  et_pb_text_align_left et_pb_bg_layout_dark">
+				
+				
+				<div class="et_pb_text_inner"><h1>Call for&nbsp;<span style="color: #4646c4;">Papers</span></h1></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_divider et_pb_divider_3 et_pb_divider_position_center et_pb_space"><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_text et_pb_text_23  et_pb_text_align_left et_pb_bg_layout_dark">
+				
+				
+				<div class="et_pb_text_inner"><p>Have a talk you’d like to give? Interested in supporting the local community? Join us by submitting your talk.</p></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_button_module_wrapper et_pb_button_11_wrapper  et_pb_module et_had_animation" style="">
+				<a class="et_pb_button et_pb_button_11 et_pb_bg_layout_light" href="https://www.papercall.io/bsidesok2020-cfp">Call for Papers</a>
+			</div>
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_2 et_pb_column_22  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div id="sponsors" class="et_pb_module et_pb_text et_pb_text_24  et_pb_text_align_left et_pb_bg_layout_dark">
+				
+				
+				<div class="et_pb_text_inner"><h1>Become a&nbsp;<span style="color: #4646c4;">Sponsor</span></h1></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_divider et_pb_divider_4 et_pb_divider_position_center et_pb_space"><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_text et_pb_text_25  et_pb_text_align_left et_pb_bg_layout_dark">
+				
+				
+				<div class="et_pb_text_inner"><p>Ready to get your name out there? Want the world to know you support Oklahoma and the information security community?</p></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_button_module_wrapper et_pb_button_12_wrapper  et_pb_module et_had_animation" style="">
+				<a class="et_pb_button et_pb_button_12 et_pb_bg_layout_light" href="https://www.bsidesok.com/docs/BSidesOK_2020_Sponsorship_Kit.pdf">Sponsorship Packages</a>
+			</div>
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row -->
+				
+				
+			</div> <!-- .et_pb_section --><div class="et_pb_section et_pb_section_8 et_section_regular">
+				
+				
+				
+				
+					<div class="et_pb_row et_pb_row_14 et_pb_row_fullwidth et_pb_equal_columns">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_23  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_26  et_pb_text_align_center et_pb_bg_layout_dark">
+				
+				
+				<div class="et_pb_text_inner"><h2>Register Now!</h2></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_text et_pb_text_27  et_pb_text_align_center et_pb_bg_layout_dark">
+				
+				
+				<div class="et_pb_text_inner"><p>Spots are limited. Be sure to register soon.</p></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_button_module_wrapper et_pb_button_13_wrapper et_pb_button_alignment_center et_pb_module et_had_animation" style="">
+				<a class="et_pb_button et_pb_button_13 et_pb_bg_layout_light" href="https://bsidesok2020.eventbrite.com/">Register Now</a>
+			</div><div class="et_pb_module et_pb_text et_pb_text_28  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row -->
+				
+				
+			</div> <!-- .et_pb_section --><div id="venue" class="et_pb_section et_pb_section_9 et_section_regular">
+				
+				
+				
+				
+					<div class="et_pb_row et_pb_row_15">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_24  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_10">
+				
+				
+				<span class="et_pb_image_wrap "><img src="./content_files/glenpool.png" alt="" title="" srcset="http://staging.urbanscouter.com/wp-content/uploads/2020/01/glenpool.png 678w, http://staging.urbanscouter.com/wp-content/uploads/2020/01/glenpool-480x379.png 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 678px, 100vw"></span>
+			</div>
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_2 et_pb_column_25  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_29  et_pb_text_align_left et_pb_bg_layout_dark et_had_animation" style="">
+				
+				
+				<div class="et_pb_text_inner"><h1>BSidesOK 2020 – April 10th</h1></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_text et_pb_text_30  et_pb_text_align_left et_pb_bg_layout_dark et_had_animation" style="">
+				
+				
+				<div class="et_pb_text_inner"><p>Training Classes – April 8th &amp; 9th</p></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_divider et_pb_divider_5 et_pb_divider_position_center et_pb_space et_had_animation" style=""><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_text et_pb_text_31  et_pb_text_align_left et_pb_bg_layout_dark et_had_animation" style="">
+				
+				
+				<div class="et_pb_text_inner"><p>Oklahoma’s Premiere Information Security Conference</p>
+<p>Glenpool Conference Center – 12205 S Yukon Ave, Glenpool Oklahoma</p></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_button_module_wrapper et_pb_button_14_wrapper et_pb_button_alignment_center et_pb_module et_had_animation" style="">
+				<a class="et_pb_button et_pb_button_14 et_pb_bg_layout_light" href="https://forms.gle/fPAfjs8UJeFr1UH97">Contact Us</a>
+			</div>
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row -->
+				
+				
+			</div> <!-- .et_pb_section -->		</div><!-- .et_builder_inner_content -->
+	</div><!-- .et-l -->
+	
+			
+		</div><!-- #et-boc -->
+							</div> <!-- .entry-content -->
+
+				
+				</article> <!-- .et_pb_post -->
+
+			
+
+</div> <!-- #main-content -->
+
+
+			<footer id="main-footer">
+				
+
+		
+				<div id="footer-bottom">
+					<div class="container clearfix">
+				<ul class="et-social-icons">
+
+	<li class="et-social-icon et-social-twitter">
+		<a href="https://twitter.com/bsidesok" class="icon">
+			<span>Twitter</span>
+		</a>
+	</li>
+
+</ul>					</div>	<!-- .container -->
+				</div>
+			</footer> <!-- #main-footer -->
+		</div> <!-- #et-main-area -->
+
+
+	</div> <!-- #page-container -->
+
+		<script type="text/javascript">
+				var et_animation_data = [{"class":"et_pb_text_0","style":"flipTop","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_text_1","style":"flipTop","repeat":"once","duration":"1000ms","delay":"50ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_divider_0","style":"flip","repeat":"once","duration":"1000ms","delay":"100ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_text_2","style":"flipTop","repeat":"once","duration":"1000ms","delay":"150ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_button_0","style":"flipTop","repeat":"once","duration":"1000ms","delay":"200ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_image_0","style":"fade","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_button_1","style":"flipTop","repeat":"once","duration":"1000ms","delay":"200ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_image_1","style":"fade","repeat":"once","duration":"2000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_text_6","style":"flipTop","repeat":"once","duration":"1000ms","delay":"150ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_button_2","style":"flipTop","repeat":"once","duration":"1000ms","delay":"200ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_button_3","style":"flipTop","repeat":"once","duration":"1000ms","delay":"200ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_button_4","style":"flipTop","repeat":"once","duration":"1000ms","delay":"200ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_image_2","style":"fade","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"100%","speed_curve":"ease-in-out"},{"class":"et_pb_text_7","style":"slideBottom","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"20%","starting_opacity":"100%","speed_curve":"ease-in-out"},{"class":"et_pb_text_8","style":"slideBottom","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"20%","starting_opacity":"100%","speed_curve":"ease-in-out"},{"class":"et_pb_image_3","style":"fade","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"100%","speed_curve":"ease-in-out"},{"class":"et_pb_image_4","style":"fade","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"100%","speed_curve":"ease-in-out"},{"class":"et_pb_text_9","style":"slideBottom","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"20%","starting_opacity":"100%","speed_curve":"ease-in-out"},{"class":"et_pb_button_5","style":"flipTop","repeat":"once","duration":"1000ms","delay":"200ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_button_6","style":"flipTop","repeat":"once","duration":"1000ms","delay":"200ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_button_7","style":"flipTop","repeat":"once","duration":"1000ms","delay":"200ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_button_8","style":"flipTop","repeat":"once","duration":"1000ms","delay":"200ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_button_9","style":"flipTop","repeat":"once","duration":"1000ms","delay":"200ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_button_10","style":"flipTop","repeat":"once","duration":"1000ms","delay":"200ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_button_11","style":"flipTop","repeat":"once","duration":"1000ms","delay":"200ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_button_12","style":"flipTop","repeat":"once","duration":"1000ms","delay":"200ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_button_13","style":"flipTop","repeat":"once","duration":"1000ms","delay":"200ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_text_29","style":"flipTop","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_text_30","style":"flipTop","repeat":"once","duration":"1000ms","delay":"50ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_divider_5","style":"flip","repeat":"once","duration":"1000ms","delay":"100ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_text_31","style":"flipTop","repeat":"once","duration":"1000ms","delay":"150ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_button_14","style":"flipTop","repeat":"once","duration":"1000ms","delay":"200ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"}];
+			</script>
+	<script type="text/javascript" src="./content_files/hoverintent-js.min.js.download"></script>
+<script type="text/javascript" src="./content_files/admin-bar.min.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var DIVI = {"item_count":"%d Item","items_count":"%d Items"};
+var et_shortcodes_strings = {"previous":"Previous","next":"Next"};
+var et_pb_custom = {"ajaxurl":"http:\/\/staging.urbanscouter.com\/wp-admin\/admin-ajax.php","images_uri":"http:\/\/staging.urbanscouter.com\/wp-content\/themes\/Divi\/images","builder_images_uri":"http:\/\/staging.urbanscouter.com\/wp-content\/themes\/Divi\/includes\/builder\/images","et_frontend_nonce":"bf5dd25955","subscription_failed":"Please, check the fields below to make sure you entered the correct information.","et_ab_log_nonce":"4acd0d6a0a","fill_message":"Please, fill in the following fields:","contact_error_message":"Please, fix the following errors:","invalid":"Invalid email","captcha":"Captcha","prev":"Prev","previous":"Previous","next":"Next","wrong_captcha":"You entered the wrong number in captcha.","ignore_waypoints":"no","is_divi_theme_used":"1","widget_search_selector":".widget_search","ab_tests":[],"is_ab_testing_active":"","page_id":"5","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"no","is_shortcode_tracking":"","tinymce_uri":""}; var et_frontend_scripts = {"builderCssContainerPrefix":"#et-boc","builderCssLayoutPrefix":"#et-boc .et-l"};
+var et_pb_box_shadow_elements = [];
+/* ]]> */
+</script>
+<script type="text/javascript" src="./content_files/custom.min.js.download"></script>
+<script type="text/javascript" src="./content_files/common.js.download"></script>
+	<!--[if lte IE 8]>
+		<script type="text/javascript">
+			document.body.className = document.body.className.replace( /(^|\s)(no-)?customize-support(?=\s|$)/, '' ) + ' no-customize-support';
+		</script>
+	<![endif]-->
+	<!--[if gte IE 9]><!-->
+		<script type="text/javascript">
+			(function() {
+				var request, b = document.body, c = 'className', cs = 'customize-support', rcs = new RegExp('(^|\\s+)(no-)?'+cs+'(\\s+|$)');
+
+						request = true;
+		
+				b[c] = b[c].replace( rcs, ' ' );
+				// The customizer requires postMessage and CORS (if the site is cross domain)
+				b[c] += ( window.postMessage && request ? ' ' : ' no-' ) + cs;
+			}());
+		</script>
+	<!--<![endif]-->
+			<div id="wpadminbar" class="nojq">
+							<a class="screen-reader-shortcut" href="http://staging.urbanscouter.com/#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id="wp-admin-bar-root-default" class="ab-top-menu"><li id="wp-admin-bar-wp-logo" class="menupop"><a class="ab-item" aria-haspopup="true" href="http://staging.urbanscouter.com/wp-admin/about.php"><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-wp-logo-default" class="ab-submenu"><li id="wp-admin-bar-about"><a class="ab-item" href="http://staging.urbanscouter.com/wp-admin/about.php">About WordPress</a></li></ul><ul id="wp-admin-bar-wp-logo-external" class="ab-sub-secondary ab-submenu"><li id="wp-admin-bar-wporg"><a class="ab-item" href="https://wordpress.org/">WordPress.org</a></li><li id="wp-admin-bar-documentation"><a class="ab-item" href="https://codex.wordpress.org/">Documentation</a></li><li id="wp-admin-bar-support-forums"><a class="ab-item" href="https://wordpress.org/support/">Support</a></li><li id="wp-admin-bar-feedback"><a class="ab-item" href="https://wordpress.org/support/forum/requests-and-feedback">Feedback</a></li></ul></div></li><li id="wp-admin-bar-site-name" class="menupop"><a class="ab-item" aria-haspopup="true" href="http://staging.urbanscouter.com/wp-admin/">BSidesOk</a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-site-name-default" class="ab-submenu"><li id="wp-admin-bar-dashboard"><a class="ab-item" href="http://staging.urbanscouter.com/wp-admin/">Dashboard</a></li></ul><ul id="wp-admin-bar-appearance" class="ab-submenu"><li id="wp-admin-bar-themes"><a class="ab-item" href="http://staging.urbanscouter.com/wp-admin/themes.php">Themes</a></li><li id="wp-admin-bar-widgets"><a class="ab-item" href="http://staging.urbanscouter.com/wp-admin/widgets.php">Widgets</a></li><li id="wp-admin-bar-menus"><a class="ab-item" href="http://staging.urbanscouter.com/wp-admin/nav-menus.php">Menus</a></li><li id="wp-admin-bar-background" class="hide-if-customize"><a class="ab-item" href="http://staging.urbanscouter.com/wp-admin/themes.php?page=custom-background">Background</a></li><li id="wp-admin-bar-customize-divi-theme" class="hide-if-no-customize"><a class="ab-item" href="http://staging.urbanscouter.com/wp-admin/customize.php?url=http%3A%2F%2Fstaging.urbanscouter.com%2F&amp;et_customizer_option_set=theme">Theme Customizer</a></li></ul></div></li><li id="wp-admin-bar-comments"><a class="ab-item" href="http://staging.urbanscouter.com/wp-admin/edit-comments.php"><span class="ab-icon"></span><span class="ab-label awaiting-mod pending-count count-0" aria-hidden="true">0</span><span class="screen-reader-text comments-in-moderation-text">0 Comments in moderation</span></a></li><li id="wp-admin-bar-new-content" class="menupop"><a class="ab-item" aria-haspopup="true" href="http://staging.urbanscouter.com/wp-admin/post-new.php"><span class="ab-icon"></span><span class="ab-label">New</span></a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-new-content-default" class="ab-submenu"><li id="wp-admin-bar-new-post"><a class="ab-item" href="http://staging.urbanscouter.com/wp-admin/post-new.php">Post</a></li><li id="wp-admin-bar-new-media"><a class="ab-item" href="http://staging.urbanscouter.com/wp-admin/media-new.php">Media</a></li><li id="wp-admin-bar-new-page"><a class="ab-item" href="http://staging.urbanscouter.com/wp-admin/post-new.php?post_type=page">Page</a></li><li id="wp-admin-bar-new-project"><a class="ab-item" href="http://staging.urbanscouter.com/wp-admin/post-new.php?post_type=project">Project</a></li><li id="wp-admin-bar-new-user"><a class="ab-item" href="http://staging.urbanscouter.com/wp-admin/user-new.php">User</a></li></ul></div></li><li id="wp-admin-bar-edit"><a class="ab-item" href="http://staging.urbanscouter.com/wp-admin/post.php?post=5&amp;action=edit">Edit Page</a></li><li id="wp-admin-bar-et-use-visual-builder"><a class="ab-item" href="http://staging.urbanscouter.com/?et_fb=1&amp;PageSpeed=off">Enable Visual Builder</a></li><li id="wp-admin-bar-new_draft"><a class="ab-item" href="http://staging.urbanscouter.com/wp-admin/admin.php?action=duplicate_post_save_as_new_post_draft&amp;post=5&amp;_wpnonce=288035ade2">Copy to a new draft</a></li></ul><ul id="wp-admin-bar-top-secondary" class="ab-top-secondary ab-top-menu"><li id="wp-admin-bar-search" class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://staging.urbanscouter.com/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150"><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"></form></div></li><li id="wp-admin-bar-my-account" class="menupop with-avatar"><a class="ab-item" aria-haspopup="true" href="http://staging.urbanscouter.com/wp-admin/profile.php">Howdy, <span class="display-name">kris</span><img alt="" src="./content_files/fcca7f26b44d8f0953ce560840b6cbf6.png" srcset="http://0.gravatar.com/avatar/fcca7f26b44d8f0953ce560840b6cbf6?s=52&amp;d=mm&amp;r=g 2x" class="avatar avatar-26 photo" height="26" width="26"></a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-user-actions" class="ab-submenu"><li id="wp-admin-bar-user-info"><a class="ab-item" tabindex="-1" href="http://staging.urbanscouter.com/wp-admin/profile.php"><img alt="" src="./content_files/fcca7f26b44d8f0953ce560840b6cbf6(1).png" srcset="http://0.gravatar.com/avatar/fcca7f26b44d8f0953ce560840b6cbf6?s=128&amp;d=mm&amp;r=g 2x" class="avatar avatar-64 photo" height="64" width="64"><span class="display-name">kris</span></a></li><li id="wp-admin-bar-edit-profile"><a class="ab-item" href="http://staging.urbanscouter.com/wp-admin/profile.php">Edit My Profile</a></li><li id="wp-admin-bar-logout"><a class="ab-item" href="http://staging.urbanscouter.com/wp-login.php?action=logout&amp;_wpnonce=2a47035d7c">Log Out</a></li></ul></div></li></ul>			</div>
+						<a class="screen-reader-shortcut" href="http://staging.urbanscouter.com/wp-login.php?action=logout&amp;_wpnonce=2a47035d7c">Log Out</a>
+					</div>
+
+		
+
+</body></html>
