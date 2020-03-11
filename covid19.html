@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>BSidesOK 2020 - April 10th</title>
+  <!-- MDB icon -->
+  <!-- <link rel="icon" href="img/bsides.ico" type="image/x-icon"> -->
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet"> 
+
+
+  <style>
+
+  	@import url('https://fonts.googleapis.com/css?family=Archivo+Black');
+
+  	.glitcher {
+  		font-family: 'Archivo Black', sans-serif !important;
+  	}
+
+  	.glitch-wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glitch {
+  @offset1: 2px;
+  @offset2: -2px;
+  @highlight1: #49FC00;
+  @highlight2: spin(@highlight1, 180);
+  
+  color: white;
+  font-size: 150px;
+  text-transform: upercase;
+  position: relative;
+  display: inline-block;
+  
+  &::before,
+  &::after  {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+  }
+  
+  &::before {
+    left: @offset1;
+    text-shadow: -2px 0 @highlight1;
+    clip: rect(24px, 550px, 90px, 0);
+    animation: glitch-anim-2 3s infinite linear alternate-reverse;
+  }
+  
+  &::after {
+    left: @offset2;
+    text-shadow: -2px 0 @highlight2;
+    clip: rect(85px, 550px, 140px, 0);
+    animation: glitch-anim 2.5s infinite linear alternate-reverse;
+  }
+}
+
+.glitch-frames (@n: 20, @index: 0) when (@index <= @n) {
+  @keyframeSel: percentage(@index/@n);
+  @rand1: unit(round(`Math.random()*150`),px);
+  @rand2: unit(round(`Math.random()*150`), px);
+  @{keyframeSel} {
+    clip: rect(@rand1, 9999px, @rand2, 0);
+  }
+  .glitch-frames(@n, (@index + 1));
+}
+
+@keyframes glitch-anim {
+  .glitch-frames(24);
+}
+
+@keyframes glitch-anim-2 {
+  .glitch-frames(30,2);
+}
+
+
+
+
+
+
+
+
+
+  html,
+  body,
+  header,
+  .view {
+    height: 100%;
+  }
+
+  body {
+  	background-color: black;
+  	font-family: 'Share Tech Mono', monospace;
+  }
+
+  .terminal-green-text {color: #00FF00 !important;}
+
+  .crt{
+  	animation-duration: 0.17s;
+       animation-name: textflicker;
+       animation-iteration-count: infinite;
+       animation-direction: alternate;
+  }
+
+	@keyframes textflicker {
+	  from {
+	    text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
+	  }
+	  to {
+	    text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
+	  }
+	}
+
+
+	p {
+		font-size: 130%;
+	}
+
+	a {
+		font-size: 100% !important;
+	}
+
+</style>
+
+
+
+</head>
+<body>
+
+  <!-- Start your project here-->  
+  
+<!-- Main navigation -->
+<header>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+      <a class="glitcher glitch-wrapper glitch" href="#">BSidesOK</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto smooth-scroll">
+
+          <li class="nav-item">
+            <a class="nav-link" href="http://bsidesok.com/#registration" data-offset="90">Registration</a>
+          </li>
+          
+
+          <li class="nav-item">
+            <a class="nav-link" href="http://bsidesok.com/#training" data-offset="30">Training</a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="http://bsidesok.com/#conference" data-offset="90">Conference</a>
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="http://bsidesok.com/#cfp" data-offset="90">CFP</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://bsidesok.com/#sponsors" data-offset="90">Sponsors</a>
+          </li>
+        </ul>
+
+        <li class="nav-item">
+          <a class="nav-link" href="http://bsidesok.com/covid19.html" data-offset="90">Coronavirus Statement</a>
+        </li>
+
+
+
+        <!-- Social Icon  -->
+        <ul class="navbar-nav nav-flex-icons">
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/BSidesOK">
+              <i class="fab fa-twitter terminal-green-text"></i>
+            </a>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="container-fluid my-5 py-5" id="training">
+
+ 
+    <!--Section: Content-->
+    <section class="px-md-5 mx-md-5 text-center white-text p-5">
+
+      <!--Grid row-->
+      <div class="row d-flex justify-content-center">
+
+        <!--Grid column-->
+        <div class="col-xl-12 col-md-12">
+
+            <h2 class="display-4 font-weight-bold white-text mb-0 pt-md-5 pt-5">Statement on <span class="purple-text">Covid-19</span></h2>
+      
+            <p class="lead">
+			       The BSidesOK Organizer team has been carefully watching the news and concerns about the spread of Covid-19. We want to be responsible, but not unreasonable.
+			     </p>
+
+           <p class="lead">
+             The vast majority of BSidesOK attendees are within driving distance in Oklahoma and surrounding states.  So far, there are only a handful of isolated cases in this geographic area. At this time, we intend to move forward with the conference.
+           </p>
+
+           <p class="lead terminal-green-text">
+             We will be taking a few intentional steps intended to protect all attendees:
+           </p>
+
+           <p class="text-left">
+            <ul class="text-left">
+              <li>
+                Anyone who appears sick will be asked to go home. We know that sucks if you just have allergies this time of year, but we don't want to take any chances. 
+              </li>
+              <li>
+                We will have plenty of hand sanitizer and clorox wipes on hand and encourage folks to use it voraciously.
+              </li>
+              <li>
+                Instead of shaking hands, we encourage fist bumps, elbow taps, jazz hands, or foot taps <a href="https://youtu.be/kEzfdrd9LYY">https://youtu.be/kEzfdrd9LYY</a>.
+              </li>
+
+            </ul>
+           </p>
+
+           <p class="lead terminal-green-text">
+            We also encourage all attendees to be well-educated to both understand the risk and avoid the hype.  Here are a few resources that we’ve found useful:
+           </p>
+
+           <p class="text-left">
+            <ul class="text-left">
+              <li>
+                World Health Organization (WHO): <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">https://www.who.int/emergencies/diseases/novel-coronavirus-2019</a>
+              </li>
+              <li>
+                Center for Disease Control and Prevention (CDC): <a href="https://www.cdc.gov/coronavirus/2019-ncov/">https://www.cdc.gov/coronavirus/2019-ncov/</a>
+              </li>
+              <li>
+                State of Oklahoma Department of Health: <a href="https://www.ok.gov/health/Prevention_and_Preparedness/Acute_Disease_Service/Disease_Information/Coronavirus_Disease_2019/Oklahoma_Response_to_Coronavirus_Disease_2019/index.html">https://www.ok.gov/health/Prevention_and_Preparedness/Acute_Disease_Service/Disease_Information/Coronavirus_Disease_2019/Oklahoma_Response_to_Coronavirus_Disease_2019/index.html</a>
+              </li>
+            </ul>
+  
+           </p>
+
+           <p class="lead">
+             <span class="purple-text">Training attendees: </span>If a training has to be cancelled, attendees will be given the option to take another course or get a full refund.  If attendees have to cancel, we will also provide a full refund.
+           </p>
+
+           <p class="lead">
+             <span class="purple-text">Sponsors: </span>As a volunteer-driving non-profit, we don't have a large corporate well to float expenses.  If things escalate and we are forced to cancel the conference, we will have some expenses to cover. However our intent is to give sponsors the option of either counting the paid amount towards next year’s sponsorship, or getting a refund minus expenses (we're still working out the percentage on that, but expect it to be 75-80%).
+           </p>
+
+           <p class="lead">
+             If you have any additional questions, please reach out to info@bsidesok.com.
+           </p>
+      
+            <a href="https://bsidesok.com" class="btn btn-outline-green btn-md waves-effect terminal-green-text" role="button"><i class="fas fa-flag-checkered left"></i> Back to the Action</a>
+
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+
+    </section>
+    <!--Section: Content-->
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- End your project here-->
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Your custom scripts (optional) -->
+  <script type="text/javascript"></script>
+
+
+  <script>$('#frameModalTop').modal("show")</script>
+
+</body>
+</html>
