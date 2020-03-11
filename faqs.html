@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>BSidesOK 2020 - April 10th</title>
+  <!-- MDB icon -->
+  <!-- <link rel="icon" href="img/bsides.ico" type="image/x-icon"> -->
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet"> 
+
+
+  <style>
+
+  	@import url('https://fonts.googleapis.com/css?family=Archivo+Black');
+
+  	.glitcher {
+  		font-family: 'Archivo Black', sans-serif !important;
+  	}
+
+  	.glitch-wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glitch {
+  @offset1: 2px;
+  @offset2: -2px;
+  @highlight1: #49FC00;
+  @highlight2: spin(@highlight1, 180);
+  
+  color: white;
+  font-size: 150px;
+  text-transform: upercase;
+  position: relative;
+  display: inline-block;
+  
+  &::before,
+  &::after  {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+  }
+  
+  &::before {
+    left: @offset1;
+    text-shadow: -2px 0 @highlight1;
+    clip: rect(24px, 550px, 90px, 0);
+    animation: glitch-anim-2 3s infinite linear alternate-reverse;
+  }
+  
+  &::after {
+    left: @offset2;
+    text-shadow: -2px 0 @highlight2;
+    clip: rect(85px, 550px, 140px, 0);
+    animation: glitch-anim 2.5s infinite linear alternate-reverse;
+  }
+}
+
+.glitch-frames (@n: 20, @index: 0) when (@index <= @n) {
+  @keyframeSel: percentage(@index/@n);
+  @rand1: unit(round(`Math.random()*150`),px);
+  @rand2: unit(round(`Math.random()*150`), px);
+  @{keyframeSel} {
+    clip: rect(@rand1, 9999px, @rand2, 0);
+  }
+  .glitch-frames(@n, (@index + 1));
+}
+
+@keyframes glitch-anim {
+  .glitch-frames(24);
+}
+
+@keyframes glitch-anim-2 {
+  .glitch-frames(30,2);
+}
+
+
+
+
+
+
+
+
+
+  html,
+  body,
+  header,
+  .view {
+    height: 100%;
+  }
+
+  body {
+  	background-color: black;
+  	font-family: 'Share Tech Mono', monospace;
+  }
+
+  .terminal-green-text {color: #00FF00 !important;}
+
+  .crt{
+  	animation-duration: 0.17s;
+       animation-name: textflicker;
+       animation-iteration-count: infinite;
+       animation-direction: alternate;
+  }
+
+	@keyframes textflicker {
+	  from {
+	    text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
+	  }
+	  to {
+	    text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
+	  }
+	}
+
+
+	p {
+		font-size: 130%;
+	}
+
+	a {
+		font-size: 100% !important;
+	}
+
+</style>
+
+
+
+</head>
+<body>
+
+  <!-- Start your project here-->  
+  
+  <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+      <a class="glitcher glitch-wrapper glitch" href="http://bsidesok.com/">BSidesOK</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="bob">
+        <ul class="navbar-nav mr-auto smooth-scroll">
+
+          <li class="nav-item">
+            <a class="nav-link" href="#registration" data-offset="90"><span> </span></a>
+          </li>
+          
+
+          <li class="nav-item">
+            <a class="nav-link" href="#training" data-offset="30"><span> </span></a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="#conference" data-offset="90"><span> </span></a>
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="#cfp" data-offset="90"><span> </span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#sponsors" data-offset="90"><span> </span></a>
+          </li>
+          
+
+        </ul>
+  </div>
+  <div>
+
+
+        <!-- Social Icon  -->
+        <ul class="navbar-nav nav-flex-icons">
+            <li class="nav-item">
+              <a class="nav-link" href="https://twitter.com/BSidesOK">
+                  <i class="fab fa-twitter terminal-green-text"></i>
+              </a>
+        </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar -->
+
+
+  <div class="container my-5">
+
+
+  <!--Section: Content-->
+  <section class="white-text">
+
+    <h2 class="display-4 font-weight-bold white-text mb-0 pt-md-5 pt-5 text-center">FAQs for <span class="purple-text">Sponsors</span></h2>
+    <!-- Section heading -->
+    <h3 class="font-weight-bold black-text mb-4 pb-2 text-center">Frequently Asked Questions</h3>
+    <hr class="w-header">
+    <!-- Section description -->
+    <p class="lead terminal-green-text mx-auto mt-4 pt-2 mb-5 text-center">Got a question? We've got answers.</p>
+
+  <div class="row">
+      <div class="col-md-6 col-lg-4 mb-4">
+        <h5 class="font-weight-normal mb-3 purple-text">What is a BSides conference?</h5>
+        <p class="white-text">BSides is a community-driven framework for building events for and by information security community members.  The goal is to expand the spectrum of conversation beyond the traditional confines of space and time.  It creates opportunities for individuals to both present and participate in an intimate atmosphere that encourages collaboration. It is an intense event with discussions, demos, and interaction from participants. It is where conversations for the next-big-thing are happening. </p>
+      </div>
+
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <h5 class="font-weight-normal mb-3 purple-text">Will BSidesOK be canceled?</h5>
+        <p class="white-text">No. We’re all-in and taking precautions to help ensure the safety of all our attendees. Please see our <a href="covid19.html" class="terminal-green-text">statement on Covid-19</a>.</p>
+      </div>
+
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <h5 class="font-weight-normal mb-3 purple-text">How many generally attend?</h5>
+        <p class="white-text">Every year we’ve increased in number. Last year, 2019, we had approximately 550 attendees.  This year we’re planning on 600, but aren’t quite sure how Covid-19 will affect attendance.</p>
+      </div>
+
+
+
+     <div class="col-md-6 col-lg-4 mb-4">
+        <h5 class="font-weight-normal mb-3 purple-text">Demographics (types of people, companies)</h5>
+        <p class="white-text">We have a wide range of attendees from infosec professionals, executives, general IT, and even students. Attendee registrations include directors, managers CIOs, CISOs, CEOs, consultants, analysts, and more.</p>
+      </div>
+
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <h5 class="font-weight-normal mb-3 purple-text">Do you provide sponsors a list of attendees?</h5>
+        <p class="white-text">No. Attendee anonymity is one of the fundamental principles of all BSides Events. We keep our attendee information private, but we do encourage all attendees to visit all of our sponsors. We also encourage sponsors to collect business cards with giveaways at their table. </p>
+      </div>
+
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <h5 class="font-weight-normal mb-3 purple-text">How does the attendee passport work?</h5>
+        <p class="white-text">Platinum and Diamond sponsors are put on a passport postcard. Attendees that get a stamp from all the Platinum and Diamond sponsors get their name put into their own door prize drawing at the end for the largest prizes. </p>
+      </div>
+
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <h5 class="font-weight-normal mb-3 purple-text">Can I provide a door Prize?</h5>
+        <p class="white-text">Absolutely. We strongly encourage sponsors to give away prizes at their table as a way to engage attendees. If you’d prefer us to give something away as a door prize, just let us know. Contact us at <a class="terminal-green-text" href="mailto:sponsors@bsidesok.com">sponsors@bsidesok.com</a>.</p>
+      </div>
+
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <h5 class="font-weight-normal mb-3 purple-text">Do you have badge scanners?</h5>
+        <p class="white-text">No. BSidesOK is a free conference with no requirements for a badge. We do not keep track of attendee information or provide it to sponsors.  </p>
+      </div>
+
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <h5 class="font-weight-normal mb-3 purple-text">How big is our sponsor table?</h5>
+        <p class="white-text">Each sponsor will receive a 6‘ or 8’ table and two chairs. If you have a preference for table size, please let us know at <a class="terminal-green-text" href="mailto:sponsors@bsidesok.com">sponsors@bsidesok.com</a>  The tables are lined around the conference halls so that attendees are forced to pass by and interact with sponsors. </p>
+      </div>
+
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <h5 class="font-weight-normal mb-3 purple-text">Is Electricity available at our table?</h5>
+        <p class="white-text">Outlets are available near some booth locations, but not all. If you require electricity for your booth, we can generally accommodate that if we know ahead of time. We do not charge extra for this.</p>
+      </div>
+
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <h5 class="font-weight-normal mb-3 purple-text">Can I get <span class="terminal-green-text">any accessory</span>?</h5>
+        <p class="white-text">In general, we don’t have extra <span class="terminal-green-text">stuff</span>.  If there’s something you need, please ask & we’ll do our best to help you out. If you need monitors/speakers/etc, we can run to BestBuy for you and pass along the cost, but it’ll probably cost more than just shipping your own.</p>
+      </div>
+
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <h5 class="font-weight-normal mb-3 purple-text">How many people can I bring?</h5>
+        <p class="white-text">As many as you like. This is a free conference thanks to your generosity. Please register your attendees so that we have an accurate count on food, beer, and t-shirts.  <a class="terminal-green-text" href="https://www.eventbrite.com/e/bsides-oklahoma-2020-tickets-87930457365">Register to Attend</a></p>
+      </div>
+
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <h5 class="font-weight-normal mb-3 purple-text">Can I ship stuff to the conference center? (and how do i ship it home?)</h5>
+        <p class="white-text">If necessary, materials can be shipped onsite to the following address. Please be reasonable on the number/size of packages & include your company name on the box.</p>
+        <p class="white-text">
+          Glenpool Conference Center
+          Attn: Pete Goltra for BSidesOK
+          12205 S. Yukon Ave.
+          Glenpool, OK 74033
+        </p>
+        <p class="white-text">Packages can be left at the GCC for pickup by your shipping vendor of choice, but the conference center does NOT have regularly-scheduled pickups. You are responsible for scheduling a pickup for your packages.</p>
+      </div>
+
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <h5 class="font-weight-normal mb-3 purple-text">What's the cut-off date to get on the shirt?</h5>
+        <p class="white-text">Sponsorships that include a logo on the t-shirt need to have submitted a signed sponsorship agreement and paid the invoice by March 23, 2020 in order to be on the t-shirt.  Sponsors can join us after that date, but their logo won’t be on the t-shirt. </p>
+      </div>
+
+    </div>
+
+  </section>
+  
+</div>
+
+
+
+
+
+
+
+<div class="container-fluid my-5 py-5">
+
+ 
+    <!--Section: Content-->
+    <section class="px-md-5 mx-md-5 text-center white-text p-5">
+
+      <!--Grid row-->
+      <div class="row d-flex justify-content-center">
+
+        <!--Grid column-->
+        <div class="col-xl-12 col-md-12">
+
+            <h2 class="display-4 font-weight-bold white-text mb-0 pt-md-5 pt-5">Not Seeing What <span class="purple-text">You're Looking For</span></h2>
+      
+            <p class="lead">
+      Send us a message!
+      </p>
+      
+            <a href="mailto:sponsors@bsidesok.com" class="btn btn-outline-green btn-md waves-effect terminal-green-text" role="button"><i class="fas fa-envelope left"></i> Contact Us</a>
+
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+
+    </section>
+    <!--Section: Content-->
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- End your project here-->
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Your custom scripts (optional) -->
+  <script type="text/javascript"></script>
+
+
+  <script>$('#frameModalTop').modal("show")</script>
+
+</body>
+</html>
