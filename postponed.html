@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>BSidesOK 2020 - April 10th</title>
+  <!-- <title>BSidesOK 2020 - Postponed</title> -->
   <!-- MDB icon -->
   <!-- <link rel="icon" href="img/bsides.ico" type="image/x-icon"> -->
   <!-- Font Awesome -->
@@ -21,83 +21,22 @@
   <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet"> 
 
 
+
+
+  <html prefix="og: http://ogp.me/ns#">
+  <head>
+  <title>BSidesOK 2020 - Postponed</title>
+  <meta property="og:title" content="BSidesOK 2020 - Postponed" />
+  <meta property="og:url" content="https://bsidesok.com" />
+  <meta property="og:image" content="https://bsidesok.com/img/logo-seo.png" />
+
+
+
+
+
+
+
   <style>
-
-  	@import url('https://fonts.googleapis.com/css?family=Archivo+Black');
-
-  	.glitcher {
-  		font-family: 'Archivo Black', sans-serif !important;
-  	}
-
-  	.glitch-wrapper {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.glitch {
-  @offset1: 2px;
-  @offset2: -2px;
-  @highlight1: #49FC00;
-  @highlight2: spin(@highlight1, 180);
-  
-  color: white;
-  font-size: 150px;
-  text-transform: upercase;
-  position: relative;
-  display: inline-block;
-  
-  &::before,
-  &::after  {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: black;
-  }
-  
-  &::before {
-    left: @offset1;
-    text-shadow: -2px 0 @highlight1;
-    clip: rect(24px, 550px, 90px, 0);
-    animation: glitch-anim-2 3s infinite linear alternate-reverse;
-  }
-  
-  &::after {
-    left: @offset2;
-    text-shadow: -2px 0 @highlight2;
-    clip: rect(85px, 550px, 140px, 0);
-    animation: glitch-anim 2.5s infinite linear alternate-reverse;
-  }
-}
-
-.glitch-frames (@n: 20, @index: 0) when (@index <= @n) {
-  @keyframeSel: percentage(@index/@n);
-  @rand1: unit(round(`Math.random()*150`),px);
-  @rand2: unit(round(`Math.random()*150`), px);
-  @{keyframeSel} {
-    clip: rect(@rand1, 9999px, @rand2, 0);
-  }
-  .glitch-frames(@n, (@index + 1));
-}
-
-@keyframes glitch-anim {
-  .glitch-frames(24);
-}
-
-@keyframes glitch-anim-2 {
-  .glitch-frames(30,2);
-}
-
-
-
-
-
-
-
 
 
   html,
@@ -113,22 +52,6 @@
   }
 
   .terminal-green-text {color: #00FF00 !important;}
-
-  .crt{
-  	animation-duration: 0.17s;
-       animation-name: textflicker;
-       animation-iteration-count: infinite;
-       animation-direction: alternate;
-  }
-
-	@keyframes textflicker {
-	  from {
-	    text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
-	  }
-	  to {
-	    text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
-	  }
-	}
 
 
 	p {
@@ -147,10 +70,49 @@
 <body>
 
  
+<header>
+  
+  <div class="view">
+    <video class="video-intro" playsinline autoplay muted loop>
+      <source src="videos/gibson.mp4" type="video/mp4">
+    </video>
+    <!-- Mask & flexbox options-->
+    <div class="mask rgba-gradient d-flex justify-content-center align-items-center">
+      <!-- Content -->
+      <div class="container-fluid px-md-3 px-sm-0">
+        <!--Grid row-->
+        <div class="row wow fadeIn">
+          <!--Grid column-->
+          <div class="col-md-6 mb-4 white-text text-center wow fadeIn">
+            <img src="img/logo.png" class="img-fluid" alt="Responsive image">
+            <h1 class="display-4 font-weight-bold white-text mb-0 pt-md-5 pt-5">BSidesOK <span class="terminal-green-text">POSTPONED - TBD</span></h1>
+            <!-- <hr class="hr-light my-4 w-75"> -->
+            <h4 class="subtext-header mt-2 mb-4">Oklahoma's Premiere Information Security Conference</h4>
+            
+          
+          </div>
+          <div class="col-md-6 mb-4 wow fadeIn">
+            <!-- 4:3 aspect ratio -->
+            <div class="embed-responsive embed-responsive-4by3">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/6Z_bXEIhhMs?autoplay=1&loop=1&playlist=6Z_bXEIhhMs&modestbranding=1"></iframe>
+            </div>
+
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </div>
+      <!-- Content -->
+    </div>
+    <!-- Mask & flexbox options-->
+  </div>
+  <!-- Full Page Intro -->
+
+
+</header>
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/6Z_bXEIhhMs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 
@@ -159,17 +121,39 @@
 
 
 
+<!-- Frame Modal Bottom -->
+<div class="modal fade top" id="frameModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+
+  <!-- Add class .modal-frame and then add class .modal-bottom (or other classes from list above) to set a position to the modal -->
+  <div class="modal-dialog modal-frame modal-top" role="document">
 
 
+    <div class="modal-content elegant-color-dark white-text">
+      <div class="modal-body">
+        <div class="row d-flex justify-content-center align-items-center text-center">
+          <div class="container">
+            <h2 class="purple-text">BSidesOK 2020 - Postponed</h2>
+            <p class="pt-3 pr-2">
+              Concerning the spread of <span class="purple-text">Covid-19, the novel Coronavirus</span>, <br>BSidesOK 2020 is <span class='terminal-green-text'>postponed</span> Read our statement below!
+              </p>
 
+              <p class="white-text">Due to the uncertain times with Coronavirus (Covid-19), BSidesOK 2020 is postponed! We take the safety of our attendees very seriously and we feel that we'll be able to provide the best 'con' experience if we postpone. We're are working diligently to bring BSidesOK to you in <span class="purple-text">2020</span>.</p>
+              <p class="white-text">Registered for <span class='terminal-green-text'>training</span> or as a <span class='terminal-green-text'>sponsor</span>? Contact us below for information regarding our reschedulind & refunds.</p>
+              <a href="mailto:info@bsidesok.com" class="btn btn-outline-green btn-md waves-effect terminal-green-text " role="button"><i class="fas fa-envelope left"></i> Contact Us</a>
+              <a class="btn btn-outline-green btn-md waves-effect terminal-green-text " data-dismiss="modal" href="#"><i class="fas fa-prescription left"></i> Close</a>
 
+          </div>
 
+          
 
-
-
-
-
-
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Frame Modal Bottom -->
 
 
 
