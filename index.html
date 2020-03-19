@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <!-- <title>BSidesOK 2020 - Postponed</title> -->
+  <title>BSidesOK 2020 - July 24th</title>
   <!-- MDB icon -->
   <!-- <link rel="icon" href="img/bsides.ico" type="image/x-icon"> -->
   <!-- Font Awesome -->
@@ -21,46 +21,83 @@
   <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet"> 
 
 
-
-
-  <html prefix="og: http://ogp.me/ns#">
-  <head>
-  <title>BSidesOK 2020 - Postponed</title>
-  <meta property="og:title" content="BSidesOK 2020 - Postponed" />
-  <meta property="og:url" content="https://bsidesok.com" />
-  <meta property="og:image" content="https://bsidesok.com/img/logo.png" />
-
-
-
-
-
-
-
-  <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-  <link rel="manifest" href="/favicon/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
-
-
-
-
-
-
-
   <style>
+
+  	@import url('https://fonts.googleapis.com/css?family=Archivo+Black');
+
+  	.glitcher {
+  		font-family: 'Archivo Black', sans-serif !important;
+  	}
+
+  	.glitch-wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glitch {
+  @offset1: 2px;
+  @offset2: -2px;
+  @highlight1: #49FC00;
+  @highlight2: spin(@highlight1, 180);
+  
+  color: white;
+  font-size: 150px;
+  text-transform: upercase;
+  position: relative;
+  display: inline-block;
+  
+  &::before,
+  &::after  {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+  }
+  
+  &::before {
+    left: @offset1;
+    text-shadow: -2px 0 @highlight1;
+    clip: rect(24px, 550px, 90px, 0);
+    animation: glitch-anim-2 3s infinite linear alternate-reverse;
+  }
+  
+  &::after {
+    left: @offset2;
+    text-shadow: -2px 0 @highlight2;
+    clip: rect(85px, 550px, 140px, 0);
+    animation: glitch-anim 2.5s infinite linear alternate-reverse;
+  }
+}
+
+.glitch-frames (@n: 20, @index: 0) when (@index <= @n) {
+  @keyframeSel: percentage(@index/@n);
+  @rand1: unit(round(`Math.random()*150`),px);
+  @rand2: unit(round(`Math.random()*150`), px);
+  @{keyframeSel} {
+    clip: rect(@rand1, 9999px, @rand2, 0);
+  }
+  .glitch-frames(@n, (@index + 1));
+}
+
+@keyframes glitch-anim {
+  .glitch-frames(24);
+}
+
+@keyframes glitch-anim-2 {
+  .glitch-frames(30,2);
+}
+
+
+
+
+
+
+
 
 
   html,
@@ -76,6 +113,22 @@
   }
 
   .terminal-green-text {color: #00FF00 !important;}
+
+  .crt{
+  	animation-duration: 0.17s;
+       animation-name: textflicker;
+       animation-iteration-count: infinite;
+       animation-direction: alternate;
+  }
+
+	@keyframes textflicker {
+	  from {
+	    text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
+	  }
+	  to {
+	    text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
+	  }
+	}
 
 
 	p {
@@ -93,35 +146,83 @@
 </head>
 <body>
 
- 
-<header>
+  <!-- Start your project here-->  
   
+<!-- Main navigation -->
+<header>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+      <a class="glitcher glitch-wrapper glitch" href="http://bsidesok.com/">BSidesOK</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="bob">
+        <ul class="navbar-nav mr-auto smooth-scroll">
+
+          <li class="nav-item">
+            <a class="nav-link" href="#registration" data-offset="90">Registration</a>
+          </li>
+          
+
+          <li class="nav-item">
+            <a class="nav-link" href="#training" data-offset="30">Training</a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="#conference" data-offset="90">Conference</a>
+
+
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#cfp" data-offset="90">CFP</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="#sponsors" data-offset="90">Sponsors</a>
+          </li>
+
+
+        </ul>
+	</div>
+	<div>
+
+
+        <!-- Social Icon  -->
+        <ul class="navbar-nav nav-flex-icons">
+    		<li class="nav-item">
+            	<a class="nav-link purple-text" href="covid19.html">Coronavirus Statement</a>
+          	</li>
+          	<li class="nav-item">
+            	<a class="nav-link" href="https://twitter.com/BSidesOK">
+              		<i class="fab fa-twitter terminal-green-text"></i>
+            	</a>
+    		</li>
+        	
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar -->
+  <!-- Full Page Intro -->
   <div class="view">
     <video class="video-intro" playsinline autoplay muted loop>
-      <source src="videos/gibson.mp4" type="video/mp4">
+      <source src="videos/green2.mp4" type="video/mp4">
     </video>
     <!-- Mask & flexbox options-->
     <div class="mask rgba-gradient d-flex justify-content-center align-items-center">
       <!-- Content -->
-      <div class="container-fluid px-md-3 px-sm-0">
+      <div class="container px-md-3 px-sm-0">
         <!--Grid row-->
         <div class="row wow fadeIn">
           <!--Grid column-->
-          <div class="col-md-6 mb-4 white-text text-center wow fadeIn">
-            <img src="img/logo.png" class="img-fluid" alt="Responsive image">
-            <!-- <h1 class="display-4 font-weight-bold white-text mb-0 pt-md-5 pt-5">BSidesOK <span class="terminal-green-text">POSTPONED - TBD</span></h1> -->
+          <div class="col-md-12 mb-4 white-text text-center wow fadeIn">
+          	<img src="img/logo.png" class="img-fluid" alt="Responsive image">
+            <h1 class="display-4 font-weight-bold white-text mb-0 pt-md-5 pt-5">BSidesOK <span class="purple-text">2020</span></h1>
             <!-- <hr class="hr-light my-4 w-75"> -->
-            <!-- <h4 class="subtext-header mt-2 mb-4">Oklahoma's Premiere Information Security Conference</h4> -->
-            <p class="white-text">To be rescheduled in <span class="terminal-green-text">2020</span>.</p>
-            
+            <h4 class="subtext-header mt-2 mb-4">Oklahoma's Premiere Information Security Conference</h4>
+            <a href="https://bsidesok2020.eventbrite.com/" class="btn btn-outline-green btn-md waves-effect terminal-green-text " role="button"><i class="fas fa-skull left"></i> Registration</a>
+            <a href="#training" class="btn btn-outline-green btn-md waves-effect terminal-green-text" role="button"><i class="fas fa-ghost left"></i> Training</a>
           
-          </div>
-          <div class="col-md-6 mb-4 wow fadeIn">
-            <!-- 4:3 aspect ratio -->
-            <div class="embed-responsive embed-responsive-4by3">
-              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/6Z_bXEIhhMs?autoplay=1&loop=1&playlist=6Z_bXEIhhMs&modestbranding=1"></iframe>
-            </div>
-
           </div>
           <!--Grid column-->
         </div>
@@ -132,9 +233,1264 @@
     <!-- Mask & flexbox options-->
   </div>
   <!-- Full Page Intro -->
-
-
 </header>
+<!-- Main navigation -->
+<!--Main Layout-->
+
+
+
+
+
+  <div class="container my-5 py-5" style="background-image: url(videos/green-glitch.mp4); background-size: cover">
+
+ 
+    <!--Section: Content-->
+    <section class="px-md-5 mx-md-5 text-center white-text p-5" id="registration">
+
+      <!--Grid row-->
+      <div class="row d-flex justify-content-center">
+
+        <!--Grid column-->
+        <div class="col-xl-8 col-md-10">
+
+            <h2 class="font-weight-bold white-text mb-0 pt-md-5 pt-5 display-4">Tickets and <span class="purple-text">Training</span></h2>
+
+            <h4 class="subtext-header mt-2 mb-4 terminal-green-text">Glenpool Conference Center – 12205 S Yukon Ave, Glenpool Oklahoma</h4>	
+      
+            <p class="lead">
+			The BSidesOK 2020 conference with multiple infosec tracks is <span class="purple-text font-weight-bold" style="font-size: 120%">July 24th</span>.
+			</p>
+
+			<p>
+			Training classes will be held on <span class="purple-text font-weight-bold" style="font-size: 120%">July 22nd and 23rd</span>.
+			</p>
+      
+            <a href="https://forms.gle/fPAfjs8UJeFr1UH97" class="btn btn-outline-green btn-md waves-effect terminal-green-text" role="button"><i class="fas fa-user-ninja left"></i> Contact Us</a>
+
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+
+    </section>
+    <!--Section: Content-->
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+  <div class="container my-5">
+
+
+  <!--Section: Content-->
+  <section class="text-center">
+
+    <!-- Section heading -->
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-lg-4 col-md-12 mb-4">
+
+        <!-- Pricing card -->
+        <div class="card pricing-card white-text">
+
+          <!-- Price -->
+          <div class="green rounded-top">
+            <h4 class="option">Training - 1 Day</h4>
+          </div>
+
+          <!-- Features -->
+          <div class="card-body striped purple-striped card-background px-5">
+
+            <h2 class="my-4 pb-3 h1">$250</h2>
+            <ul style="font-size: 85%">
+              <li>
+                <p>Single Day Classes</p>
+              </li>
+              <li>
+                <p><a href="#cyberattacks" class="terminal-green-text">Cyber Attacks Against the Organization</a></p>
+              </li>
+              <li>
+                <p><a href="#privacy" class="terminal-green-text">Privacy Compliance for IT, Auditors, & Leaders</a></p>
+              </li>
+            </ul>
+            <a href="https://bsidesok2020.eventbrite.com/" class="btn btn-outline-green btn-md waves-effect terminal-green-text" role="button"><i class="fas fa-cat left"></i> Register</a>
+
+          </div>
+          <!-- Features -->
+
+        </div>
+
+        <!-- Pricing card -->
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-lg-4 col-md-6 mb-4">
+
+        <!-- Pricing card -->
+        <div class="card pricing-card white-text">
+
+          <!-- Price -->
+          <div class="purple darken-1 accent-4 rounded-top">
+            <h4 class="option">Conference</h4>
+          </div>
+
+          <!-- Features -->
+          <div class="card-body striped purple-striped card-background px-5">
+
+            <h2 class="my-4 pb-3 h1">Free</h2>
+            <ul>
+            	<li>
+            		<p>July 24th</p>
+            	</li>
+              <li>
+                <p>Multiple Tracks</p>
+              </li>
+              <li>
+                <p>Tech Villages</p>
+              </li>
+              <li>
+                <p>Tabletop Exercises</p>
+              </li>
+              <li>
+                <p>Lunch provided</p>
+              </li>
+              <li>
+                <p>Beer & liquors</p>
+              </li>
+              <li>
+                <p>Tea, Coffee, Water</p>
+              </li>
+              <li>
+                <p>Free Swag</p>
+              </li>
+              <li>
+              	<p>Door prizes</p>
+              </li>
+            </ul>
+             <a href="https://bsidesok2020.eventbrite.com/" class="btn btn-outline-green btn-md waves-effect terminal-green-text" role="button"><i class="fas fa-hat-wizard left"></i> Register</a>
+
+          </div>
+          <!-- Features -->
+
+        </div>
+        <!-- Pricing card -->
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-lg-4 col-md-6 mb-4">
+
+        <!-- Pricing card -->
+        <div class="card pricing-card white-text">
+
+          <!-- Price -->
+          <div class="green darken-2 rounded-top">
+            <h4 class="option">Training - 2 Days</h4>
+          </div>
+
+          <!-- Features -->
+          <div class="card-body striped purple-striped card-background px-5">
+
+            <h2 class="my-4 pb-3 h1">$500</h2>
+            <ul>
+            	<li>
+            		<p>Two Day Classes</p>
+            	</li>
+              <li>
+                <p><a href="#webapp" class="terminal-green-text">Web Application Pentesting</a></p>
+              </li>
+              <li>
+                <p><a href="#network" class="terminal-green-text">Network Pentesting</a></p>
+              </li>
+              <li>
+                <p><a href="#malware" class="terminal-green-text">Malware Analysis</a></p>
+              </li>
+              <li>
+                <p><a href="#exploit" class="terminal-green-text">Exploit Development</a></p>
+              </li>
+              <li>
+                <p><a href="#forensics" class="terminal-green-text">Digital Forensics & Finding Hackers</a></p>
+              </li>
+            </ul>
+            <a href="https://bsidesok2020.eventbrite.com/" class="btn btn-outline-green btn-md waves-effect terminal-green-text" role="button"><i class="fas fa-kiwi-bird left"></i> Register</a>
+
+          </div>
+          <!-- Features -->
+
+        </div>
+        <!-- Pricing card -->
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </section>
+  <!--Section: Content-->
+</div>
+
+
+
+
+
+
+  <div class="container my-5">
+
+
+  <!--Section: Content-->
+  <section class="dark-grey-text">
+
+    <div class="row pr-lg-5">
+      <div class="col-md-7 mb-4">
+
+        <div class="view">
+          <!-- <img src="img/gconference.jpg" class="img-fluid" alt="conference"> -->
+          	<video class="video-intro" playsinline autoplay muted loop>
+		     	<source src="videos/conference.mp4" type="video/mp4">
+	    	</video>
+        </div>
+
+      </div>
+      <div class="col-md-5 d-flex align-items-center">
+        <div>
+          
+          <h2 class="font-weight-bold mb-4 purple-text display-4">Panel & Table Top Exercises</h2>
+
+        	<p class="terminal-green-text">We’ll be hosting a top notch panel this year. Many important figures from around Oklahoma will be participating. Also, we’re proud to announce we’ll be hosting a tabletop exercise that’s not only new but engages you, the audience.</p>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!--Section: Content-->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="container my-5">
+
+
+  <!--Section: Content-->
+  <section class="dark-grey-text">
+
+    <div class="row pr-lg-5">
+      <div class="col-md-5 d-flex align-items-center">
+        <div>
+          
+          <h2 class="font-weight-bold mb-4 purple-text display-4">Training Classes</h2>
+
+        	<p class="terminal-green-text">We’re pleased to offer several training classes. Several courses are geared for a hands-on experience meant to introduce students and professionals to the exciting world of offensive several. The others are meant to give an in-depth look at the defending a organization and the information systems. Plus, we’ve got Michael Gough coming, and that guy is just brilliant.</p>
+
+        </div>
+      </div>
+      <div class="col-md-7 mb-4">
+
+        <div class="view">
+          <!-- <img src="img/gtraining.jpg" class="img-fluid" alt="conference"> -->
+          <video class="video-intro" playsinline autoplay muted loop>
+		     	<source src="videos/training.mp4" type="video/mp4">
+	    	</video>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+  <!--Section: Content-->
+</div>
+
+
+
+
+
+
+
+
+
+<hr>
+
+
+
+
+  <div class="container my-5">
+
+
+  <!--Section: Content-->
+  <section class="dark-grey-text">
+
+    <div class="row pr-lg-5">
+      <div class="col-md-7 mb-4">
+
+        <div class="view">
+          <!-- <img src="img/gvillages.jpg" class="img-fluid" alt="conference"> -->
+          <video class="video-intro" playsinline autoplay muted loop>
+		     	<source src="videos/villages.mp4" type="video/mp4">
+	    	</video>
+        </div>
+
+      </div>
+      <div class="col-md-5 d-flex align-items-center">
+        <div>
+          
+          <h2 class="font-weight-bold mb-4 purple-text display-4">Tech Villages</h2>
+
+        	<p class="terminal-green-text">Several tech villages will be making their return this year, inluding the College of Lockpicking, Hardware Hacking, and the Lego Kids. There’s even talk of an upcoming Capture-the-Flag, so stay tuned.</p>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!--Section: Content-->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="container my-5 py-5" id="training">
+
+ 
+    <!--Section: Content-->
+    <section class="px-md-5 mx-md-5 text-center white-text p-5">
+
+      <!--Grid row-->
+      <div class="row d-flex justify-content-center">
+
+        <!--Grid column-->
+        <div class="col-xl-12 col-md-12">
+
+            <h2 class="display-4 font-weight-bold white-text mb-0 pt-md-5 pt-5">Classes and <span class="purple-text">Trainers</span></h2>
+      
+            <p class="lead">
+			We are pleased to provide several training classes ranging from intros to offensive security, to in-depth defensive analysis, to finally protective measures for your organization. We’ve got a little bit of everything here.
+			</p>
+      
+            <a href="https://bsidesok2020.eventbrite.com/" class="btn btn-outline-green btn-md waves-effect terminal-green-text" role="button"><i class="fas fa-flag-checkered left"></i> Register</a>
+
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+
+    </section>
+    <!--Section: Content-->
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container pt-5 my-5 z-depth-1">
+  <section class="p-md-3 mx-md-5 text-center text-lg-left">
+    <h2 class="text-center mx-auto font-weight-bold mb-4 pb-2 display-3 white-text">Our Team</h2>
+    <div class="row">
+
+
+
+
+
+
+
+      <div class="col-lg-6 mb-6" id="webapp">
+        <div class="p-4">
+          <div
+            class="avatar w-100 black d-flex justify-content-center align-items-center"
+          >
+            <img alt="Kris Wall"
+              src="img/wall.jpg"
+              class="img-fluid rounded-circle z-depth-1" style="max-height: 300px"
+            />
+          </div>
+          <div class="text-center mt-3">
+            <h3 class="font-weight-bold pt-2 terminal-green-text">Kristopher Wall</h3>
+            <a href=""><h3 class="purple-text">Web Application Penetration Testing</h3></a>
+            <p class="terminal-green-text">
+                  This course is designed to familiarize students with the basic methodologies of web application penetration testing and give hands-on experience exploiting web applications. Students will learn the common weaknesses that web developers introduce into web apps. From there, we’ll learn about chaining these vulnerabilities into a full fledged assault on a web application and their underlying infrastructure. This is a hands on course and a laptop will be required. We’ll go from the basics and into advanced detection methods using commonly available tool sets. To be clear, this is much, much more in depth than the OWASP Top 10.
+            </p>
+           	<a href="agendas/webapp_syllabus.pdf"><p class="purple-text">Course Syllabus</p></a>
+           	<a href="https://bsidesok2020.eventbrite.com/" class="btn btn-outline-green btn-md waves-effect terminal-green-text" role="button"><i class="fas fa-user-astronaut left"></i> Register - 2 Day Class</a>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+      <div class="col-lg-6 mb-6" id="network">
+        <div class="p-4">
+          <div
+            class="avatar w-100 black d-flex justify-content-center align-items-center"
+          >
+            <img alt="Nathan Sweaney"
+              src="img/sweaney.png"
+              class="img-fluid rounded-circle z-depth-1" style="max-height: 300px"
+            />
+          </div>
+          <div class="text-center mt-3">
+            <h3 class="font-weight-bold pt-2 terminal-green-text">Nathan Sweaney</h3>
+            <a href=""><h3 class="purple-text">Network Penetration Testing</h3></a>
+            <p class="terminal-green-text">
+                  This hands-on course will teach attendees a basic methodology for network penetration testing. Students will walk through the phases of a test with demonstrations of various tools and tactics used in each phase. The course is heavily focused on hands-on labs so that attendees have the opportunity to actually use common tools and techniques. By the end of the 2-day training, students will understand the structure of a penetration test and have the experience necessary to begin practicing the demonstrated toolsets.
+            </p>
+           	<a href="agendas/network_syllabus.pdf"><p class="purple-text">Course Syllabus</p></a>
+           	<a href="https://bsidesok2020.eventbrite.com/" class="btn btn-outline-green btn-md waves-effect terminal-green-text" role="button"><i class="fas fa-user-secret left"></i> Register - 2 Day Class</a>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+      <div class="col-lg-6 mb-6" id="malware">
+        <div class="p-4">
+          <div
+            class="avatar w-100 black d-flex justify-content-center align-items-center"
+          >
+            <img alt="Michael Gough"
+              src="img/gough.png"
+              class="img-fluid rounded-circle z-depth-1" style="max-height: 300px"
+            />
+          </div>
+          <div class="text-center mt-3">
+            <h3 class="font-weight-bold pt-2 terminal-green-text">Michael Gough</h3>
+            <a href=""><h3 class="purple-text">Malware Discovery and Basic Analysis</h3></a>
+            <p class="terminal-green-text">
+                  This course focuses on performing fast triage and how to discover if a system has malware, how to build a malware analysis lab and perform basic malware analysis quickly. The concept of Malware Management, Malware Discovery and Basic Malware Analysis will be discussed with exercises linking the three concepts together.
+            </p>
+           	<a href="agendas/malware_syllabus.pdf"><p class="purple-text">Course Syllabus</p></a>
+           	<a href="https://bsidesok2020.eventbrite.com/" class="btn btn-outline-green btn-md waves-effect terminal-green-text" role="button"><i class="fas fa-user-graduate left"></i> Register - 2 Day Class</a>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+      <div class="col-lg-6 mb-6" id="exploit">
+        <div class="p-4">
+          <div
+            class="avatar w-100 black d-flex justify-content-center align-items-center"
+          >
+            <img alt="Aaron Moss"
+              src="img/moss.jpg"
+              class="img-fluid rounded-circle z-depth-1" style="max-height: 300px"
+            />
+          </div>
+          <div class="text-center mt-3">
+            <h3 class="font-weight-bold pt-2 terminal-green-text">Aaron Moss</h3>
+            <a href=""><h3 class="purple-text">Exploit Development</h3></a>
+            <p class="terminal-green-text">
+                  Exploit development is the process of understanding how software bugs can become application vulnerabilities, and how to write code to exploit these vulnerabilities. This quick two-day crash course in high-level exploit development will hopefully not only pique the interest of how exploits work under the hood, but also help you have a better understanding of why patching is so very important. This intermediate level technical course is targeted at penetration testers who want to take their skills beyond using someone else’s tools but is recommended for anyone who wants to learn about how to take a software crash to full system shell.
+            </p>
+           	<a href="agendas/exploit_syllabus.pdf"><p class="purple-text">Course Syllabus</p></a>
+           	<a href="https://bsidesok2020.eventbrite.com/" class="btn btn-outline-green btn-md waves-effect terminal-green-text" role="button"><i class="fas fa-user-ninja left"></i> Register - 2 Day Class</a>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+      <div class="col-lg-6 mb-6" id="forensics">
+        <div class="p-4">
+          <div
+            class="avatar w-100 black d-flex justify-content-center align-items-center"
+          >
+            <img alt="Donovan Farrow"
+              src="img/farrow.jpeg"
+              class="img-fluid rounded-circle z-depth-1" style="max-height: 300px"
+            />
+          </div>
+          <div class="text-center mt-3">
+            <h3 class="font-weight-bold pt-2 terminal-green-text">Donovan Farrow</h3>
+            <a href=""><h3 class="purple-text">Digital Forensics & Finding Hackers</h3></a>
+            <p class="terminal-green-text">
+                  This course will take you from a the 101 perspective of digital forensics, to court, to corporate collections and how to find a hacker with a multi-tool kit of fun and open source skills.
+            </p>
+           	<!-- <a href="agendas/webapp_syllabus.pdf"><p class="purple-text">Course Syllabus</p></a> -->
+           	<a href="https://bsidesok2020.eventbrite.com/" class="btn btn-outline-green btn-md waves-effect terminal-green-text" role="button"><i class="fas fa-user-md left"></i> Register - 2 Day Class</a>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+      <div class="col-lg-6 mb-6" id="cyberattacks">
+        <div class="p-4">
+          <div
+            class="avatar w-100 black d-flex justify-content-center align-items-center"
+          >
+            <img alt="Jonathan Kimmitt"
+              src="img/kimmitt.jpg"
+              class="img-fluid rounded-circle z-depth-1" style="max-height: 300px"
+            />
+          </div>
+          <div class="text-center mt-3">
+            <h3 class="font-weight-bold pt-2 terminal-green-text">Jonathan Kimmitt</h3>
+            <a href=""><h3 class="purple-text">July 22nd – Cyber Attacks Against the Organization</h3></a>
+            <p class="terminal-green-text">
+                  In this one-day class we will be covering the primary methods that an attacker might use against an organization. I will be performing and demonstrating live attacks against a mock environment and we will discuss what they are, how they work, and how to defend. The class attendees will see the attack and the results, and they will have opportunities to discuss the risk and security controls. They will also have the opportunity to perform some of same techniques to get firsthand knowledge and experience.
+            </p>
+            <a href="agendas/cyberattacks_syllabus.pdf"><p class="purple-text">Course Syllabus</p></a>
+            <a id="privacy" href=""><h3 class="purple-text">July 23rd – Privacy Compliance for IT, Auditors & Leadership</h3></a>
+            <p class="terminal-green-text">
+                  In this one-day session the class will cover how an organization builds, implements, and evaluates a privacy program in the organization. We will cover the needs the organization, risks of non-compliance, and the process of building and evaluating the program. We will also discuss how Leadership, IT and IT Security can be part of the privacy program for the organization and what will be required to meet the various privacy compliances.
+            </p>
+           	<a href="agendas/privacy_syllabus.pdf"><p class="purple-text">Course Syllabus</p></a>
+           	<a href="https://bsidesok2020.eventbrite.com/" class="btn btn-outline-green btn-md waves-effect terminal-green-text" role="button"><i class="fas fa-user-tie left"></i> Register - 1 Day Classes</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container z-depth-1 my-5" id="sponsors">
+
+  <section class="text-center py-5">
+
+    <h2 class="display-4 white-text"><i class="fas fa-dragon"></i> Diamond <span class="purple-text">Sponsors</span></h2>
+
+    <!-- Logo carousel -->
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="0">
+      <div class="carousel-inner">
+        <!-- First slide -->
+        <div class="carousel-item active">
+          <!--Grid row-->
+          <div class="row">
+
+            <!--First column-->
+            <div class="col-lg-12 col-md-12 d-flex align-items-center justify-content-center">
+              <a href="https://www.optiv.com/"><img src="https://media-s3-us-east-1.ceros.com/optiv/images/2018/05/16/5980d2dc26a9794f84dd6ae66d126e09/optiv-rgb-reverse.png" class="img-fluid px-4" alt="Optiv"></a>
+            </div>
+            <!--/First column-->
+
+
+
+
+          </div>
+          <!--/Grid row-->
+        </div>
+        <!-- First slide -->
+
+        
+      </div>
+
+    </div>
+    <!-- Logo carousel -->
+    
+  </section>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container z-depth-1 my-5" id="sponsors2">
+
+  <section class="text-center py-5">
+
+    <h2 class="display-4 white-text"><i class="fab fa-fort-awesome"></i> Platinum <span class="purple-text">Sponsors</span></h2>
+
+    <!-- Logo carousel -->
+    <div id="carouselExampleSlidesOnly2" class="carousel slide" data-ride="carousel" data-interval="0">
+      <div class="carousel-inner">
+        <!-- First slide -->
+        <div class="carousel-item active">
+          <!--Grid row-->
+          <div class="row">
+
+            <!--First column-->
+            <div class="col-lg-6 col-md-12 d-flex align-items-center justify-content-center">
+              <a href="https://www.fortinet.com/"><img src="https://fortiguard.com/static/images/Fortinet-logo%20white.png" class="img-fluid px-4" alt="Fortinet"></a>
+            </div>
+            <!--/First column-->
+            <!--second column-->
+            <div class="col-lg-6 col-md-12 d-flex align-items-center justify-content-center">
+              <a href="https://www.okta.com/"><img src="https://www.okta.com/sites/all/themes/Okta/images/blog/Logos/Okta_Logo_White_Medium.png" class="img-fluid px-4" alt="Okta"></a>
+            </div>
+            <!--/second column-->
+
+
+
+
+
+
+
+
+
+          </div>
+          <!--/Grid row-->
+        </div>
+        <!-- First slide -->
+
+        
+      </div>
+
+    </div>
+    <!-- Logo carousel -->
+    
+  </section>
+
+</div>
+
+
+
+
+<div class="container z-depth-1 my-5">
+
+  <section class="text-center py-5">
+
+    <h2 class="display-4 white-text"><i class="fas fa-dungeon"></i> Gold <span class="purple-text">Sponsors</span></h2>
+
+    <!-- Logo carousel -->
+    <div id="carouselExampleSlidesOnly3" class="carousel slide" data-ride="carousel" data-interval="0">
+      <div class="carousel-inner">
+        <!-- First slide -->
+        <div class="carousel-item active">
+          <!--Grid row-->
+          <div class="row">
+
+            <!--First column-->
+            <div class="col-lg-6 col-md-12 d-flex align-items-center justify-content-center">
+              <a href="https://www.criticalstart.com/"><img src="https://www.criticalstart.com/wp-content/themes/criticalstart/img/cs-footer-logo.png" class="img-fluid px-4" alt="CriticalStart"></a>
+            </div>
+            <!--/First column-->
+
+            <!--second column-->
+            <div class="col-lg-6 col-md-12 d-flex align-items-center justify-content-center">
+              <a href="http://www.aliasforensics.com/"><img src="http://www.aliasforensics.com/wp-content/uploads/2018/05/AF2HighRes_Transparent_all_white-300x201.png" class="img-fluid px-4" alt="Alias Forensics"></a>
+            </div>
+            <!--/second column-->
+
+
+            <!--third column-->
+            <div class="col-lg-6 col-md-12 d-flex align-items-center justify-content-center">
+              <a href="https://truedigitalsecurity.com"><img src="img/true.png" class="img-fluid px-4" alt="True Digital Security"></a>
+            </div>
+            <!--/third column-->
+
+            <!--third column-->
+            <div class="col-lg-6 col-md-12 d-flex align-items-center justify-content-center">
+              <a href="https://www.secureideas.com/"><img src="img/secure.png" class="img-fluid px-4" alt="Secure Ideas"></a>
+            </div>
+            <!--/third column-->
+
+
+
+          </div>
+          <!--/Grid row-->
+        </div>
+        <!-- First slide -->
+
+        
+      </div>
+
+    </div>
+    <!-- Logo carousel -->
+    
+  </section>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container z-depth-1 my-5">
+
+  <section class="text-center py-5">
+
+    <h2 class="display-4 white-text"><i class="fas fa-dice-d20"></i> Silver <span class="purple-text">Sponsors</span></h2>
+
+    <!-- Logo carousel -->
+    <div id="carouselExampleSlidesOnly4" class="carousel slide" data-ride="carousel" data-interval="0">
+      <div class="carousel-inner">
+        <!-- First slide -->
+        <div class="carousel-item active">
+          <!--Grid row-->
+          <div class="row">
+
+            <!--First column-->
+            <div class="col-lg-4 col-md-12 d-flex align-items-center justify-content-center">
+              <a href="https://www.checkpoint.com/"><img src="img/checkpoint.png" class="img-fluid px-4" alt="Checkpoint"></a>
+            </div>
+            <!--/First column-->
+
+
+
+
+
+          </div>
+          <!--/Grid row-->
+        </div>
+        <!-- First slide -->
+
+        
+      </div>
+
+    </div>
+    <!-- Logo carousel -->
+    
+  </section>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="container my-5 py-5" id="training">
+
+ 
+    <!--Section: Content-->
+    <section class="px-md-5 mx-md-5 text-center white-text p-5">
+
+      <!--Grid row-->
+      <div class="row d-flex justify-content-center">
+
+        <!--Grid column-->
+        <div class="col-xl-12 col-md-12">
+
+            <h2 class="display-4 font-weight-bold white-text mb-0 pt-md-5 pt-5">Sponsorship <span class="purple-text">FAQs</span></h2>
+      
+            <p class="lead">
+			Got a question about sponsorship? We've probably got what you're looking for.
+			</p>
+      
+            <a href="faqs.html" class="btn btn-outline-green btn-md waves-effect terminal-green-text" role="button"><i class="fas fa-question left"></i> FAQs</a>
+
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+
+    </section>
+    <!--Section: Content-->
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="container my-5 py-5 z-depth-1">
+
+
+    <!--Section: Content-->
+    <section class="px-md-5 mx-md-5 text-center dark-grey-text">
+ 
+
+      <!--Grid row-->
+      <div class="row" id="cfp">
+
+        <!--Grid column-->
+        <div class="col-md-6 mb-4 mb-md-0">
+
+          <i class="fas fa-bullhorn fa-3x terminal-green-text"></i>
+
+          <h3 class="font-weight-bold my-3 white-text">Call for <span class="purple-text">Papers</span></h3>
+
+          <p class="terminal-green-text mx-md-5">Our Call for Papers has ended!</p>
+
+          
+
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-6 mb-4 mb-md-0">
+
+          <i class="fas fa-comments-dollar fa-3x terminal-green-text"></i>
+
+           <h3 class="font-weight-bold my-3 white-text">Become a <span class="purple-text">Sponsor</span></h3>
+
+          <p class="terminal-green-text mx-md-5">Ready to get your name out there? Want the world to know you support Oklahoma and the information security community?</p>
+
+          <a href="BSidesOK_2020_Sponsorship_Kit.pdf" class="btn btn-outline-green btn-md waves-effect terminal-green-text" role="button"><i class="fas fa-comments-dollar left terminal-green-text"></i>Sponsorship Kit</a>
+
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+
+
+    </section>
+    <!--Section: Content-->
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container my-5 py-5">
+
+ 
+    <!--Section: Content-->
+    <section class="px-md-5 mx-md-5 text-center white-text p-5">
+
+      <!--Grid row-->
+      <div class="row d-flex justify-content-center">
+
+        <!--Grid column-->
+        <div class="col-xl-12 col-md-12">
+
+            <h2 class="display-4 font-weight-bold white-text mb-0 pt-md-5 pt-5">Calling all <span class="purple-text">Volunteers</span></h2>
+      
+            <p class="lead">
+			We are pleased to provide several training classes ranging from intros to offensive security, to in-depth defensive analysis, to finally protective measures for your organization. We’ve got a little bit of everything here.
+			</p>
+      
+            <a href="https://forms.gle/fPAfjs8UJeFr1UH97" class="btn btn-outline-green btn-md waves-effect terminal-green-text" role="button"><i class="fas fa-people-carry left"></i> Volunteer</a>
+
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+
+    </section>
+    <!--Section: Content-->
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container my-5 py-5">
+
+ 
+    <!--Section: Content-->
+    <section class="px-md-5 mx-md-5 text-center white-text p-5">
+
+      <!--Grid row-->
+      <div class="row d-flex justify-content-center">
+
+        <!--Grid column-->
+        <div class="col-xl-12 col-md-12">
+
+            <h2 class="display-4 font-weight-bold white-text mb-0 pt-md-5 pt-5">Code of <span class="purple-text">Conduct</span></h2>
+      
+            <p class="lead">
+			Everyone deserves to attend a learning event, community or professional, with a reasonable expectation of good behavior. The BSidesOK Team expects that while attending this conference you treat everyone with the love and respect you wish to receive. This applies to all attendees, speakers, volunteers, vendors, and anyone in between. We feel that if you do that, then this conference will once again run smoothly and we will all have a good time. <span class="purple-text">Don’t be an ass!</span>
+			</p>
+      
+            <a href="https://forms.gle/fPAfjs8UJeFr1UH97" class="btn btn-outline-green btn-md waves-effect terminal-green-text" role="button"><i class="fas fa-broom left"></i> Contact Us</a>
+
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+
+    </section>
+    <!--Section: Content-->
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container my-5 py-5">
+
+ 
+    <!--Section: Content-->
+    <section class="px-md-5 mx-md-5 text-center white-text p-5">
+
+      <!--Grid row-->
+      <div class="row d-flex justify-content-center">
+
+        <!--Grid column-->
+        <div class="col-xl-12 col-md-12">
+
+            <h2 class="display-4 font-weight-bold white-text mb-0 pt-md-5 pt-5">Register <span class="purple-text">Now</span></h2>
+      
+            <p class="lead">
+			Spots are limited. Be sure to <span class="purple-text">register soon</span>.
+			</p>
+      
+            <a href="https://bsidesok2020.eventbrite.com/" class="btn btn-outline-green btn-md waves-effect terminal-green-text" role="button"><i class="fas fa-broom left"></i> Register</a>
+
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+
+    </section>
+    <!--Section: Content-->
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container mt-3 mb-5" id="conference">
+
+  <!-- Section: Block Content -->
+  <section class="mb-4">
+
+    <style>
+      .map-container {
+        overflow: hidden;
+        position: relative;
+        height: 0;
+      }
+
+      .map-container iframe {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+      }
+    </style>
+
+    <div class="card">
+
+      <div class="row black">
+        <div class="col-md-6">
+
+          <!-- Google Maps -->
+          <div id="map-within-card-2" class="map-container rounded-left" style="height: 400px">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12914.048938321284!2d-96.0179748!3d35.9833488!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x52b1255767b5b473!2sGlenpool%20Conference%20Center!5e0!3m2!1sen!2sus!4v1581483035993!5m2!1sen!2sus" frameborder="0"
+              style="border:0" allowfullscreen></iframe>
+          </div>
+          <!-- Google Maps -->
+
+        </div>
+
+        <div class="col-10 col-md-4 mx-auto align-self-center py-4 black">
+
+          <h2 class="font-weight-bold white-text text-uppercase">BSides Oklahoma 2020</h2>
+          <h3 class="font-weight-normal mb-4 purple-text">Conference</h3>
+          <h4 class="terminal-green-text">July 24th, 2020</h4>
+          <br>
+          <h3 class="font-weight-normal mb-4 purple-text">Training</h3>
+          <h4 class="terminal-green-text">July 22nd & 23rd, 2020</h4>
+          <p class="text-white font-weight-light">12205 S Yukon Ave<br>Glenpool, OK, 74033</p>
+         
+
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+  <!-- Section: Block Content -->
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer -->
+<footer class="page-footer font-small black pt-4">
+
+  <!-- Footer Text -->
+  <div class="container text-center text-md-left">
+ 
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase font-weight-bold">Organizers</h5>
+        <p class="terminal-green-text">BSidesOK is made possible by the many volunteers and the local infosec community, including ISSA OKC/Tulsa.</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mb-md-0 mb-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase font-weight-bold">Sponsors</h5>
+        <p class="terminal-green-text">BSidesOK is free and will remain free to the community thanks to our sponsors. Please take a moment to thank the sponsors and their efforts in the community. Without their support, this event wouldn't be possible.</p>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Text -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3"> 2020 Copyright:
+    <a href="#"> BSidesOK</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -154,21 +1510,17 @@
   <div class="modal-dialog modal-frame modal-top" role="document">
 
 
-    <div class="modal-content elegant-color-dark white-text">
+    <div class="modal-content grey darken-3 white-text">
       <div class="modal-body">
         <div class="row d-flex justify-content-center align-items-center text-center">
-          <div class="container">
-            <h2 class="purple-text">BSidesOK 2020 - Postponed</h2>
-            <p class="pt-3 pr-2">
-              Concerning the spread of <span class="purple-text">Covid-19, the novel Coronavirus</span>, <br>BSidesOK 2020 is <span class='terminal-green-text'>postponed</span> Read our statement below!
-              </p>
+        	<div class="container">
+        		<p class="pt-3 pr-2">
+        			Concerning the spread of Covid-19, the novel Coronavirus, BSidesOK 2020 is not canceled. Read our statement below!
+          		</p>
+          		<a href="covid19.html" class="btn btn-outline-green btn-md waves-effect terminal-green-text " role="button"><i class="fas fa-heartbeat left"></i> Learn More</a>
+          		<a class="btn btn-outline-green btn-md waves-effect terminal-green-text " data-dismiss="modal" href="#"><i class="fas fa-prescription left"></i> Close</a>
 
-              <p class="white-text">Due to the uncertain times with Coronavirus (Covid-19), BSidesOK 2020 is postponed! We take the safety of our attendees very seriously and we feel that we'll be able to provide the best 'con' experience if we postpone. We're are working diligently to bring BSidesOK to you in <span class="purple-text">2020</span>.</p>
-              <p class="white-text">Registered for <span class='terminal-green-text'>training</span> or as a <span class='terminal-green-text'>sponsor</span>? We'll contact you via email with details on our plans. Contact us below for any other questions.</p>
-              <a href="mailto:info@bsidesok.com" class="btn btn-outline-green btn-md waves-effect terminal-green-text " role="button"><i class="fas fa-envelope left"></i> Contact Us</a>
-              <a class="btn btn-outline-green btn-md waves-effect terminal-green-text " data-dismiss="modal" href="#"><i class="fas fa-prescription left"></i> Close</a>
-
-          </div>
+        	</div>
 
           
 
@@ -179,6 +1531,11 @@
   </div>
 </div>
 <!-- Frame Modal Bottom -->
+
+
+
+
+
 
 
 
